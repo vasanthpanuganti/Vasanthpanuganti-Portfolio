@@ -314,7 +314,7 @@ body {
 /* Career Highlights Section */
 .career-highlights {
     padding: 80px 20px;
-    background: var(--bg-light);
+    background: white;
 }
 
 .highlights-grid {
@@ -1114,7 +1114,7 @@ body {
 /* Extra Achievements Section */
 .achievements {
     padding: 80px 20px;
-    background: var(--bg-light);
+    background: white;
 }
 
 .achievements-grid {
@@ -1163,7 +1163,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 20px;
-    background: var(--bg-light);
+    background: white;
 }
 
 .contact-content {
@@ -1252,9 +1252,10 @@ body {
 
 /* Footer */
 .footer {
-    background: #1a1a1a;
-    color: white;
+    background: white;
+    color: var(--text-primary);
     padding: 80px 20px 40px 20px;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-container {
@@ -1266,7 +1267,7 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    color: white;
+    color: #1a1a1a;
     margin-bottom: 3rem;
 }
 
@@ -1286,11 +1287,12 @@ body {
 }
 
 .question-bubble {
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
+    background: var(--bg-light);
+    color: var(--text-primary);
     align-self: flex-start;
     margin-left: 0;
     border-bottom-left-radius: 4px;
+    border: 1px solid var(--border-color);
 }
 
 .question-bubble p {
@@ -1371,24 +1373,24 @@ body {
     max-width: 700px;
     margin: 3rem auto 2rem;
     padding-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-message p {
     font-size: 1.0625rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
 .footer-quote {
     font-size: 1.125rem;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary);
     padding: 1.25rem;
     border-left: 4px solid var(--primary-color);
     margin: 2rem auto;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-light);
     border-radius: 4px;
 }
 
@@ -1399,14 +1401,13 @@ body {
     align-items: center;
     gap: 1.5rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--border-color);
 }
 
 .copyright {
-    color: white;
+    color: var(--text-secondary);
     font-size: 0.9375rem;
     margin: 0;
-    opacity: 0.9;
 }
 
 .social-icons {
@@ -1417,22 +1418,23 @@ body {
 .social-icon {
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--bg-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
 }
 
 .social-icon:hover {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
     transform: scale(1.15);
-    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(24, 119, 242, 0.3);
+    border-color: var(--primary-color);
 }
 
 .social-icon svg {
