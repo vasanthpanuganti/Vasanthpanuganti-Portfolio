@@ -676,8 +676,8 @@ body.dark-theme .theme-toggle .moon-icon {
 
 .company-logo {
     flex-shrink: 0;
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -822,14 +822,14 @@ body.dark-theme .theme-toggle .moon-icon {
 
 .education-header {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
 .university-logo {
     flex-shrink: 0;
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -839,6 +839,12 @@ body.dark-theme .theme-toggle .moon-icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.university-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .university-name {
@@ -854,7 +860,6 @@ body.dark-theme .theme-toggle .moon-icon {
     font-size: 0.9375rem;
     color: var(--text-body);
     margin: 0;
-    margin-left: 0;
     line-height: 1.5;
     font-weight: 400;
 }
@@ -1580,8 +1585,8 @@ body.dark-theme .theme-toggle .moon-icon {
 }
 
 .cert-logo {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     flex-shrink: 0;
     border-radius: 8px;
     overflow: hidden;
@@ -2282,8 +2287,8 @@ body.dark-theme .theme-toggle .moon-icon {
     }
 
     .company-logo {
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
     }
 
     .work-title {
@@ -2315,8 +2320,8 @@ body.dark-theme .theme-toggle .moon-icon {
     }
 
     .university-logo {
-        width: 56px;
-        height: 56px;
+        width: 64px;
+        height: 64px;
     }
 
     .footer-heading {
@@ -2484,8 +2489,8 @@ body.dark-theme .theme-toggle .moon-icon {
     }
 
     .company-logo {
-        width: 44px;
-        height: 44px;
+        width: 56px;
+        height: 56px;
     }
 
     .company-name {
