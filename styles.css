@@ -229,37 +229,26 @@ body {
     font-weight: bold;
 }
 
-/* View My Resume Section */
-.resume-cta-section {
-    padding: 60px 20px;
-    background: white;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+/* About Me Section */
+.about-section {
+    padding: 100px 20px;
+    background: #FFFFFF;
 }
 
-.resume-cta-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1000px;
+.about-content {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.resume-cta-text h2 {
-    font-size: 1.875rem;
-    color: #1a1a1a;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-}
-
-.resume-cta-text p {
-    font-size: 1.0625rem;
+.about-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
     color: var(--text-secondary);
-    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-.resume-cta-button {
+.download-resume-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -269,19 +258,19 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    margin-top: 1.5rem;
     box-shadow: 0 4px 12px rgba(24, 119, 242, 0.2);
 }
 
-.resume-cta-button:hover {
-    background: var(--secondary-color);
+.download-resume-btn:hover {
+    background: #000000;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(24, 119, 242, 0.3);
 }
 
-.resume-cta-button svg {
+.download-resume-btn svg {
     flex-shrink: 0;
 }
 
