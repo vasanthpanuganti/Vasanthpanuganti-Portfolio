@@ -171,14 +171,38 @@
             <div class="resume-content">
                 <div class="resume-section">
                     <h3>Education</h3>
-                    <div class="resume-item">
-                        <h4>Master of Science, Engineering Management - Arizona State University</h4>
-                        <p class="date">May 2025 | Tempe, AZ</p>
-                        <p>Relevant Coursework: Product Design, Product Management, Data-Driven Decision Making, Advanced Project Management</p>
+                    <div class="education-item">
+                        <div class="education-left">
+                            <h4>Master of Science, Engineering Management</h4>
+                            <p class="education-date">May 2025 | Tempe, AZ</p>
+                            <p class="education-description">Relevant Coursework: Product Design, Product Management, Data-Driven Decision Making, Advanced Project Management</p>
+                        </div>
+                        <div class="education-right">
+                            <div class="university-info">
+                                <div class="university-logo">
+                                    <img src="assets/asu-logo.png" alt="Arizona State University Logo">
+                                </div>
+                                <div class="university-details">
+                                    <h5 class="university-name">Arizona State University</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-item">
-                        <h4>Bachelor of Technology, Civil Engineering - JNTU</h4>
-                        <p class="date">May 2021 | Jawaharlal Nehru Technological University</p>
+                    <div class="education-item">
+                        <div class="education-left">
+                            <h4>Bachelor of Technology, Civil Engineering</h4>
+                            <p class="education-date">May 2021</p>
+                        </div>
+                        <div class="education-right">
+                            <div class="university-info">
+                                <div class="university-logo">
+                                    <img src="assets/jntu-logo.png" alt="JNTU Logo">
+                                </div>
+                                <div class="university-details">
+                                    <h5 class="university-name">Jawaharlal Nehru Technological University</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -358,7 +382,7 @@
 
             <div class="project-card">
                 <div class="project-image-wrapper">
-                    <img src="assets/project1.jpg" alt="Mobile App Engagement Boost">
+                    <img src="assets/project4.jpg" alt="Mobile App Engagement Boost">
                     <div class="project-overlay"></div>
                 </div>
                 <div class="project-info">
@@ -378,6 +402,52 @@
                     </div>
                 </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="assets/project5.jpg" alt="Data Analytics Dashboard">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">05</div>
+                    <h3 class="project-title">Data Analytics Dashboard</h3>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <h4>Data Analytics Dashboard</h4>
+                        <p>Developed a comprehensive analytics platform with real-time insights and predictive modeling, enabling data-driven decisions that improved product metrics by 18%.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Power BI</span>
+                            <span class="tech-pill">SQL</span>
+                            <span class="tech-pill">Python</span>
+                        </div>
+                        <a href="#" class="project-cta">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="assets/project6.jpg" alt="A/B Testing Framework">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">06</div>
+                    <h3 class="project-title">A/B Testing Framework</h3>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <h4>A/B Testing Framework</h4>
+                        <p>Built a scalable experimentation platform that streamlined testing processes, running 30+ concurrent experiments and reducing feature validation time by 40%.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Optimizely</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Node.js</span>
+                        </div>
+                        <a href="#" class="project-cta">View Project →</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -387,217 +457,85 @@
             <h2 class="section-title">Case Studies</h2>
             <p class="section-subtitle">Deep dives into my most impactful projects</p>
 
-            <div class="case-studies-container">
+            <div class="case-studies-grid">
                 <!-- Case Study 1 -->
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <div class="case-study-image">
-                            <img src="assets/case-study-1.jpg" alt="Case Study 1">
-                            <div class="case-study-overlay">Case Study</div>
-                        </div>
-                        <div class="case-study-intro">
-                            <h3>Project Title: E-commerce Platform Redesign</h3>
-                            <p class="case-study-tagline">Transforming user experience to boost conversion rates by 45%</p>
-                            <div class="case-study-meta">
-                                <span class="meta-item"><strong>Role:</strong> Lead Developer</span>
-                                <span class="meta-item"><strong>Duration:</strong> 6 months</span>
-                                <span class="meta-item"><strong>Year:</strong> 2024</span>
-                            </div>
-                        </div>
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-1.jpg" alt="E-commerce Personalization">
                     </div>
-
-                    <div class="case-study-body">
-                        <div class="case-study-section">
-                            <h4>The Challenge</h4>
-                            <p>The existing e-commerce platform had a high cart abandonment rate (72%) and poor mobile experience. Users complained about slow load times and confusing navigation, resulting in declining sales.</p>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Solution</h4>
-                            <p>Implemented a complete platform overhaul with focus on:</p>
-                            <ul>
-                                <li>Mobile-first responsive design</li>
-                                <li>Performance optimization (reduced load time by 60%)</li>
-                                <li>Simplified checkout process (reduced from 5 to 3 steps)</li>
-                                <li>AI-powered product recommendations</li>
-                            </ul>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Impact</h4>
-                            <div class="impact-stats">
-                                <div class="stat">
-                                    <span class="stat-number">45%</span>
-                                    <span class="stat-label">Increase in Conversion</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">60%</span>
-                                    <span class="stat-label">Faster Load Time</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">28%</span>
-                                    <span class="stat-label">Lower Bounce Rate</span>
-                                </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/flipkart-logo.png" alt="Flipkart">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">UX Design</span>
+                                <span class="category-tag">Data Systems</span>
+                                <span class="category-tag">Personalization</span>
                             </div>
                         </div>
-
-                        <div class="case-study-section">
-                            <h4>Technologies Used</h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Node.js</span>
-                                <span class="tech-badge">MongoDB</span>
-                                <span class="tech-badge">AWS</span>
-                                <span class="tech-badge">Redis</span>
-                                <span class="tech-badge">Stripe</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-study-footer">
-                        <a href="#" class="case-study-link">View Full Case Study →</a>
+                        <h3 class="case-study-title-new">E-commerce Personalization Engine</h3>
+                        <p class="case-study-description">Built ML-powered recommendation system boosting conversion by 28% for 100M+ users. Implemented real-time user behavior analysis and collaborative filtering algorithms.</p>
+                        <a href="#" class="case-study-cta">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Case Study 2 -->
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <div class="case-study-image">
-                            <img src="assets/case-study-2.jpg" alt="Case Study 2">
-                            <div class="case-study-overlay">Case Study</div>
-                        </div>
-                        <div class="case-study-intro">
-                            <h3>Project Title: Healthcare Analytics Dashboard</h3>
-                            <p class="case-study-tagline">Real-time insights for better patient care decisions</p>
-                            <div class="case-study-meta">
-                                <span class="meta-item"><strong>Role:</strong> Full Stack Developer</span>
-                                <span class="meta-item"><strong>Duration:</strong> 4 months</span>
-                                <span class="meta-item"><strong>Year:</strong> 2023</span>
-                            </div>
-                        </div>
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-2.jpg" alt="Adaptive Learning Platform">
                     </div>
-
-                    <div class="case-study-body">
-                        <div class="case-study-section">
-                            <h4>The Challenge</h4>
-                            <p>Hospital administrators needed a centralized system to track patient data, resource allocation, and operational metrics across multiple departments in real-time.</p>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Solution</h4>
-                            <p>Developed a comprehensive analytics dashboard featuring:</p>
-                            <ul>
-                                <li>Real-time data visualization with interactive charts</li>
-                                <li>Automated reporting and alerts system</li>
-                                <li>Role-based access control for different departments</li>
-                                <li>Integration with existing hospital management systems</li>
-                            </ul>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Impact</h4>
-                            <div class="impact-stats">
-                                <div class="stat">
-                                    <span class="stat-number">35%</span>
-                                    <span class="stat-label">Time Saved on Reports</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">50+</span>
-                                    <span class="stat-label">Daily Active Users</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">99.9%</span>
-                                    <span class="stat-label">Uptime</span>
-                                </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/k12-logo.png" alt="K12">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">EdTech</span>
+                                <span class="category-tag">Automation</span>
+                                <span class="category-tag">ML/AI</span>
                             </div>
                         </div>
-
-                        <div class="case-study-section">
-                            <h4>Technologies Used</h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Vue.js</span>
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">PostgreSQL</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">D3.js</span>
-                                <span class="tech-badge">REST API</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-study-footer">
-                        <a href="#" class="case-study-link">View Full Case Study →</a>
+                        <h3 class="case-study-title-new">Adaptive Learning Platform</h3>
+                        <p class="case-study-description">Designed personalized learning paths with ML-powered adaptive quizzes. Reduced dropout by 30% and improved student engagement by 25% through dynamic content delivery.</p>
+                        <a href="#" class="case-study-cta">
+                            Explore Project
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Case Study 3 -->
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <div class="case-study-image">
-                            <img src="assets/case-study-3.jpg" alt="Case Study 3">
-                            <div class="case-study-overlay">Case Study</div>
-                        </div>
-                        <div class="case-study-intro">
-                            <h3>Project Title: AI-Powered Customer Support System</h3>
-                            <p class="case-study-tagline">Automating support to reduce response time by 70%</p>
-                            <div class="case-study-meta">
-                                <span class="meta-item"><strong>Role:</strong> ML Engineer & Developer</span>
-                                <span class="meta-item"><strong>Duration:</strong> 5 months</span>
-                                <span class="meta-item"><strong>Year:</strong> 2023</span>
-                            </div>
-                        </div>
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-3.jpg" alt="Search Optimization">
                     </div>
-
-                    <div class="case-study-body">
-                        <div class="case-study-section">
-                            <h4>The Challenge</h4>
-                            <p>A SaaS company was struggling with high support ticket volumes, long response times, and escalating support costs. Customer satisfaction scores were declining rapidly.</p>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Solution</h4>
-                            <p>Built an intelligent customer support system with:</p>
-                            <ul>
-                                <li>AI chatbot for instant responses to common queries</li>
-                                <li>Smart ticket routing and prioritization</li>
-                                <li>Knowledge base with semantic search</li>
-                                <li>Sentiment analysis for customer feedback</li>
-                            </ul>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Impact</h4>
-                            <div class="impact-stats">
-                                <div class="stat">
-                                    <span class="stat-number">70%</span>
-                                    <span class="stat-label">Faster Response Time</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">85%</span>
-                                    <span class="stat-label">Issues Auto-Resolved</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">92%</span>
-                                    <span class="stat-label">Customer Satisfaction</span>
-                                </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/byjus-logo.png" alt="Byju's">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">Search</span>
+                                <span class="category-tag">NLP</span>
+                                <span class="category-tag">Data Systems</span>
                             </div>
                         </div>
-
-                        <div class="case-study-section">
-                            <h4>Technologies Used</h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">TensorFlow</span>
-                                <span class="tech-badge">NLP</span>
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">FastAPI</span>
-                                <span class="tech-badge">Elasticsearch</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-study-footer">
-                        <a href="#" class="case-study-link">View Full Case Study →</a>
+                        <h3 class="case-study-title-new">Search Optimization System</h3>
+                        <p class="case-study-description">Revamped search with NLP-based query understanding and personalized ranking. Achieved 12% higher conversion and 9% CTR increase for millions of daily searches.</p>
+                        <a href="#" class="case-study-cta">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -609,23 +547,33 @@
         <div class="container">
             <h2 class="section-title">Certifications</h2>
             <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-content">
-                        <h3>Project Management Professional (PMP)</h3>
-                        <p class="cert-issuer">Project Management Institute (PMI)</p>
-                        <p class="cert-date">Active Certification</p>
-                        <p class="cert-id">Demonstrates expertise in project management across industries</p>
+                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                    <div class="certification-card">
+                        <div class="cert-logo">
+                            <img src="assets/pmi-logo.png" alt="PMI Logo">
+                        </div>
+                        <div class="cert-content">
+                            <h3>Project Management Professional (PMP)</h3>
+                            <p class="cert-issuer">Project Management Institute (PMI)</p>
+                            <p class="cert-date">Active Certification</p>
+                            <p class="cert-id">Demonstrates expertise in project management across industries</p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="certification-card">
-                    <div class="cert-content">
-                        <h3>Certified Scrum Product Owner (CSPO)</h3>
-                        <p class="cert-issuer">Scrum Alliance</p>
-                        <p class="cert-date">Active Certification</p>
-                        <p class="cert-id">Expertise in Agile product ownership and Scrum framework</p>
+                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                    <div class="certification-card">
+                        <div class="cert-logo">
+                            <img src="assets/scrum-alliance-logo.png" alt="Scrum Alliance Logo">
+                        </div>
+                        <div class="cert-content">
+                            <h3>Certified Scrum Product Owner (CSPO)</h3>
+                            <p class="cert-issuer">Scrum Alliance</p>
+                            <p class="cert-date">Active Certification</p>
+                            <p class="cert-id">Expertise in Agile product ownership and Scrum framework</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
