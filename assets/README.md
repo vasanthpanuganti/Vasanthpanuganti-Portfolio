@@ -17,7 +17,7 @@ Please add the following images to this folder:
 - **Filenames**: `project1.jpg`, `project2.jpg`, `project3.jpg`
 - **Recommended size**: 600x400 pixels (3:2 aspect ratio)
 - **Format**: JPG or PNG
-- **Description**: Screenshots or preview images of your projects![Uploading unnamed (4).jpg…]()
+- **Description**: Screenshots or preview images of your projects!
 
 
 ## How to Add Images
