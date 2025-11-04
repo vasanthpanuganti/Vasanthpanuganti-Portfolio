@@ -24,6 +24,13 @@ Please add the following images to this folder:
 - **Format**: JPG or PNG
 - **Description**: Featured images for your detailed case studies
 
+### 4. Company Logos (Work History)
+- **Filenames**: `k12-logo.png`, `flipkart-logo.png`, `byjus-logo.png`
+- **Recommended size**: 200x200 pixels (square)
+- **Format**: PNG (with transparent background preferred)
+- **Description**: Company logos for work history section
+- **Note**: Logos should be official company logos
+
 ## How to Add Images
 
 1. Copy your images to this folder
