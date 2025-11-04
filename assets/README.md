@@ -18,6 +18,12 @@ Please add the following images to this folder:
 - **Format**: JPG or PNG
 - **Description**: Screenshots or preview images of your projects
 
+### 3. Case Study Images
+- **Filenames**: `case-study-1.jpg`, `case-study-2.jpg`, `case-study-3.jpg`
+- **Recommended size**: 600x400 pixels (3:2 aspect ratio)
+- **Format**: JPG or PNG
+- **Description**: Featured images for your detailed case studies
+
 ## How to Add Images
 
 1. Copy your images to this folder
