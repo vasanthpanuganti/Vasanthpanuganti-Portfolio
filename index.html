@@ -10,25 +10,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-left">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-                <div class="logo">Vasanth Panuganti</div>
-            </div>
+            <a href="#home" class="logo">Vasanth Panuganti</a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -48,6 +30,22 @@
                 <span></span>
             </div>
         </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -430,34 +428,38 @@
             <h2 class="education-title">Education</h2>
             <div class="education-list">
                 <div class="education-item">
-                    <div class="education-left">
-                        <div class="university-logo">
-                            <img src="assets/ASU.png" alt="Arizona State University Logo">
-                        </div>
-                        <div class="university-details">
-                            <h3 class="university-name">Arizona State University</h3>
-                            <p class="education-dates">May 2025</p>
+                    <div class="education-col-left">
+                        <div class="education-header">
+                            <div class="university-logo">
+                                <img src="assets/ASU.png" alt="Arizona State University Logo">
+                            </div>
+                            <div class="university-text">
+                                <h3 class="university-name">Arizona State University</h3>
+                                <p class="education-dates">May 2025</p>
+                            </div>
                         </div>
                     </div>
                     <div class="education-divider"></div>
-                    <div class="education-right">
+                    <div class="education-col-right">
                         <h3 class="education-degree">Master of Science, Engineering Management</h3>
                         <p class="education-info">Relevant Coursework: Product Design, Product Management, Data-Driven Decision Making, Advanced Project Management</p>
                     </div>
                 </div>
 
                 <div class="education-item">
-                    <div class="education-left">
-                        <div class="university-logo">
-                            <img src="assets/JNTU_Hyderabad.png" alt="JNTU Logo">
-                        </div>
-                        <div class="university-details">
-                            <h3 class="university-name">Jawaharlal Nehru Technological University</h3>
-                            <p class="education-dates">May 2021</p>
+                    <div class="education-col-left">
+                        <div class="education-header">
+                            <div class="university-logo">
+                                <img src="assets/JNTU_Hyderabad.png" alt="JNTU Logo">
+                            </div>
+                            <div class="university-text">
+                                <h3 class="university-name">Jawaharlal Nehru Technological University</h3>
+                                <p class="education-dates">May 2021</p>
+                            </div>
                         </div>
                     </div>
                     <div class="education-divider"></div>
-                    <div class="education-right">
+                    <div class="education-col-right">
                         <h3 class="education-degree">Bachelor of Technology, Civil Engineering</h3>
                         <p class="education-info">Focus on structural engineering and project management principles</p>
                     </div>
@@ -632,6 +634,20 @@
                                 </div>
                             </div>
                         </a>
+
+                        <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="certification-card">
+                                <div class="cert-logo">
+                                    <img src="assets/CSSC-GB-Final-v2.png" alt="Six Sigma Green Belt Logo">
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Six Sigma Green Belt</h3>
+                                    <p class="cert-issuer">Council for Six Sigma Certification</p>
+                                    <p class="cert-date">Active Certification</p>
+                                    <p class="cert-id">Certified in process improvement and quality management methodologies</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -647,6 +663,7 @@
                 <button class="cert-dot" data-index="1" aria-label="Go to certification 2"></button>
                 <button class="cert-dot" data-index="2" aria-label="Go to certification 3"></button>
                 <button class="cert-dot" data-index="3" aria-label="Go to certification 4"></button>
+                <button class="cert-dot" data-index="4" aria-label="Go to certification 5"></button>
             </div>
         </div>
     </section>
@@ -659,17 +676,17 @@
                 <div class="work-item">
                     <div class="work-left">
                         <div class="company-logo">
-                            <img src="assets/CSSC-GB-Final-v2.png" alt="Company Logo">
+                            <img src="assets/ASU.png" alt="ASU Logo">
                         </div>
                         <div class="company-details">
-                            <h3 class="company-name">Previous Experience</h3>
-                            <p class="work-dates">Jan 2019 – Dec 2020</p>
+                            <h3 class="company-name">ASU Graduate Student Government</h3>
+                            <p class="work-dates">May 2024 – May 2025</p>
                         </div>
                     </div>
                     <div class="work-divider"></div>
                     <div class="work-right">
-                        <h3 class="work-title">Product Analyst / Coordinator</h3>
-                        <p class="work-description">Supported product development initiatives, conducted market research, and coordinated cross-functional teams to deliver on project milestones.</p>
+                        <h3 class="work-title">Election Commissioner</h3>
+                        <p class="work-description">Oversaw graduate student elections, ensured electoral integrity, managed voting processes, and coordinated with student organizations to promote democratic participation across the university.</p>
                     </div>
                 </div>
             </div>
