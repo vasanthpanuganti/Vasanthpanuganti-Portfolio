@@ -47,14 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTopBtn.classList.remove('show');
         }
 
-        // Change navbar background on scroll
+        // Change navbar shadow on scroll
         const navbar = document.querySelector('.navbar');
-        if (window.pageYOffset > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.backdropFilter = 'blur(10px)';
+        if (window.pageYOffset > 20) {
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.12)';
         } else {
-            navbar.style.background = 'var(--bg-white)';
-            navbar.style.backdropFilter = 'none';
+            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
         }
     });
 
@@ -67,24 +65,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Highlight Active Section in Navigation
     const sections = document.querySelectorAll('section[id]');
+    const navLinksAll = document.querySelectorAll('.nav-link');
 
     function highlightNavigation() {
         const scrollY = window.pageYOffset;
 
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 150;
             const sectionId = section.getAttribute('id');
             const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
 
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink.style.color = 'var(--primary-color)';
-                } else {
-                    navLink.style.color = 'var(--text-primary)';
+                    // Remove active class from all links
+                    navLinksAll.forEach(link => link.classList.remove('active'));
+                    // Add active class to current link
+                    navLink.classList.add('active');
                 }
             }
         });
+
+        // If at the top of the page, highlight Home
+        if (scrollY < 100) {
+            navLinksAll.forEach(link => link.classList.remove('active'));
+            const homeLink = document.querySelector('.nav-link[href="#home"]');
+            if (homeLink) homeLink.classList.add('active');
+        }
     }
 
     window.addEventListener('scroll', highlightNavigation);
