@@ -7,7 +7,8 @@ This folder contains images and other assets for the portfolio website.
 Please add the following images to this folder:
 
 ### 1. Profile Picture
-- **Filename**: `profile.jpg`
+- **Filename**: `profile.jpg`![unnamed (4)](https://github.com/user-attachments/assets/d9ed79a4-dae0-4588-b0b0-ece631f2bed1)
+
 - **Recommended size**: 400x400 pixels (square)
 - **Format**: JPG or PNG
 - **Description**: Your professional headshot or portrait
@@ -16,7 +17,8 @@ Please add the following images to this folder:
 - **Filenames**: `project1.jpg`, `project2.jpg`, `project3.jpg`
 - **Recommended size**: 600x400 pixels (3:2 aspect ratio)
 - **Format**: JPG or PNG
-- **Description**: Screenshots or preview images of your projects
+- **Description**: Screenshots or preview images of your projects![Uploading unnamed (4).jpg…]()
+
 
 ## How to Add Images
 
