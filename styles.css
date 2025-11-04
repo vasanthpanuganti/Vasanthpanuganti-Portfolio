@@ -222,7 +222,7 @@ body.dark-theme .theme-toggle .moon-icon {
     margin-bottom: 1.5rem;
     line-height: 1.1;
     font-weight: 700;
-    color: #000000;
+    color: var(--text-heading);
 }
 
 .highlight {
@@ -265,18 +265,18 @@ body.dark-theme .theme-toggle .moon-icon {
 }
 
 .btn-primary:hover {
-    background: #000000;
-    border-color: #000000;
+    background: var(--text-heading);
+    border-color: var(--text-heading);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #000000;
-    border: 2px solid #000000;
+    color: var(--text-heading);
+    border: 2px solid var(--text-heading);
 }
 
 .btn-secondary:hover {
-    background: #000000;
+    background: var(--text-heading);
     color: #FFFFFF;
 }
 
@@ -679,23 +679,17 @@ body.dark-theme .theme-toggle .moon-icon {
 
 .company-logo {
     flex-shrink: 0;
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: var(--logo-bg);
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border-light);
-    transition: all 0.3s ease;
 }
 
 .company-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 8px;
 }
 
 .company-details {
@@ -822,38 +816,32 @@ body.dark-theme .theme-toggle .moon-icon {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-.education-left {
+.education-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 2rem;
+}
+
+.education-header {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    padding-right: 2rem;
+    gap: 1rem;
 }
 
 .university-logo {
     flex-shrink: 0;
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: var(--logo-bg);
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border-light);
 }
 
 .university-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 8px;
-}
-
-.university-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    flex: 1;
 }
 
 .university-name {
@@ -869,6 +857,7 @@ body.dark-theme .theme-toggle .moon-icon {
     font-size: 0.9375rem;
     color: var(--text-body);
     margin: 0;
+    margin-left: 0;
     line-height: 1.5;
     font-weight: 400;
 }
@@ -886,7 +875,7 @@ body.dark-theme .theme-toggle .moon-icon {
     align-self: stretch;
 }
 
-.education-right {
+.education-col-right {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -1126,7 +1115,7 @@ body.dark-theme .theme-toggle .moon-icon {
 /* Case Studies Section */
 .case-studies {
     padding: 80px 20px;
-    background: #FAFAFA;
+    background: var(--bg-light);
 }
 
 .section-subtitle {
@@ -2313,8 +2302,23 @@ body.dark-theme .theme-toggle .moon-icon {
         padding: 2rem 0;
     }
 
-    .education-right {
-        justify-content: flex-start;
+    .education-divider {
+        display: none;
+    }
+
+    .education-col-left {
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .education-col-right {
+        padding-left: 0;
+    }
+
+    .university-logo {
+        width: 56px;
+        height: 56px;
     }
 
     .footer-heading {
