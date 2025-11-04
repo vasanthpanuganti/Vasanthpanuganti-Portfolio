@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #10a6e2;
-    --secondary-color: #0d8abc;
-    --accent-color: #10a6e2;
+    --primary-color: #1877F2;
+    --secondary-color: #0C63D4;
+    --accent-color: #1877F2;
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
-    --bg-light: #eef9fd;
+    --bg-light: #E7F3FF;
     --bg-white: #ffffff;
-    --border-color: #d1e9f4;
-    --shadow: 0 1px 3px 0 rgba(16, 166, 226, 0.1), 0 1px 2px 0 rgba(16, 166, 226, 0.06);
-    --shadow-md: 0 4px 6px -1px rgba(16, 166, 226, 0.1), 0 2px 4px -1px rgba(16, 166, 226, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(16, 166, 226, 0.1), 0 4px 6px -2px rgba(16, 166, 226, 0.05);
+    --border-color: #C5E3FF;
+    --shadow: 0 1px 3px 0 rgba(24, 119, 242, 0.1), 0 1px 2px 0 rgba(24, 119, 242, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(24, 119, 242, 0.1), 0 2px 4px -1px rgba(24, 119, 242, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(24, 119, 242, 0.1), 0 4px 6px -2px rgba(24, 119, 242, 0.05);
 }
 
 html {
@@ -120,7 +120,7 @@ body {
 .hero {
     margin-top: 80px;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #10a6e2 0%, #0d8abc 100%);
+    background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);
     color: white;
 }
 
@@ -365,7 +365,7 @@ body {
 
 .skill-category.nice-to-have {
     border-left-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(16, 166, 226, 0.05), rgba(16, 166, 226, 0.02));
+    background: linear-gradient(135deg, rgba(24, 119, 242, 0.05), rgba(24, 119, 242, 0.02));
 }
 
 .skill-category-title {
@@ -1071,7 +1071,7 @@ body {
 /* End Summary Section */
 .end-summary {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #10a6e2 0%, #0d8abc 100%);
+    background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);
     color: white;
     text-align: center;
 }
@@ -1106,7 +1106,7 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #10a6e2 0%, #0d8abc 100%);
+    background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);
     color: white;
     padding: 80px 20px 40px 20px;
 }
