@@ -1250,42 +1250,6 @@ body {
     resize: vertical;
 }
 
-/* End Summary Section */
-.end-summary {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1877F2 0%, #0C63D4 100%);
-    color: white;
-    text-align: center;
-}
-
-.summary-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.summary-content p {
-    font-size: 1.125rem;
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-    opacity: 0.95;
-}
-
-.summary-quote {
-    font-size: 1.25rem;
-    font-style: italic;
-    margin: 2rem auto;
-    padding: 1rem;
-    border-left: 4px solid white;
-    max-width: 600px;
-}
-
-.summary-cta {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
 /* Footer */
 .footer {
     background: #1a1a1a;
@@ -1399,6 +1363,33 @@ body {
 .email-link:hover {
     color: var(--secondary-color);
     border-bottom-color: var(--secondary-color);
+}
+
+/* Footer Message */
+.footer-message {
+    text-align: center;
+    max-width: 700px;
+    margin: 3rem auto 2rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-message p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+.footer-quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 1.25rem;
+    border-left: 4px solid var(--primary-color);
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
 }
 
 /* Footer Bottom */
@@ -1643,11 +1634,6 @@ body {
         justify-content: flex-start;
     }
 
-    .summary-cta {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .footer-heading {
         font-size: 1.5rem;
     }
@@ -1669,6 +1655,19 @@ body {
     .chat-bubble {
         max-width: 100%;
     }
+
+    .footer-message {
+        padding-top: 2rem;
+    }
+
+    .footer-message p {
+        font-size: 1rem;
+    }
+
+    .footer-quote {
+        font-size: 1.0625rem;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1688,8 +1687,7 @@ body {
     .case-studies,
     .certifications,
     .achievements,
-    .contact,
-    .end-summary {
+    .contact {
         padding: 60px 20px;
     }
 
@@ -1749,6 +1747,15 @@ body {
     .social-icon {
         width: 40px;
         height: 40px;
+    }
+
+    .footer-message p {
+        font-size: 0.9375rem;
+    }
+
+    .footer-quote {
+        font-size: 1rem;
+        padding: 0.875rem;
     }
 
     .case-study-meta {
