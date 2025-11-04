@@ -30,12 +30,18 @@ Welcome to my professional portfolio website! This is a modern, responsive portf
    - Add project images as `project1.jpg`, `project2.jpg`, `project3.jpg`
    - See `assets/README.md` for details
 
-3. **Customize content**
+3. **Add your resume PDF**
+   - Export your resume as PDF
+   - Save it as `Vasanth_Panuganti_Resume.pdf` in the `resume/` folder
+   - The download button will work automatically
+   - See `resume/README.md` for details
+
+4. **Customize content**
    - Edit `index.html` to add your personal information
    - Update career highlights, projects, resume details, and contact info
    - Modify colors in `styles.css` if desired
 
-4. **Open in browser**
+5. **Open in browser**
    - Simply open `index.html` in your web browser
    - Or use a local server for development
 
@@ -52,6 +58,9 @@ Vasanthpanuganti-Portfolio/
 │   ├── project1.jpg    # Project screenshot 1 (add this)
 │   ├── project2.jpg    # Project screenshot 2 (add this)
 │   └── project3.jpg    # Project screenshot 3 (add this)
+├── resume/             # Resume download folder
+│   ├── README.md       # Guide for adding resume
+│   └── Vasanth_Panuganti_Resume.pdf  # Your resume PDF (add this)
 └── README.md           # This file
 ```
 
@@ -112,6 +121,8 @@ Modify CSS variables in `styles.css`:
 - Active section highlighting
 - Contact form validation
 - Responsive mobile menu
+- Download resume button (in navigation and resume section)
+- Animated download button with pulse effect
 
 ## Deployment
 

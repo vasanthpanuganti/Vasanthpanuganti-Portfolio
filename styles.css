@@ -120,6 +120,24 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+.download-btn {
+    background: linear-gradient(135deg, #059669, #10b981);
+    animation: pulse 2s infinite;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #047857, #059669);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
