@@ -1767,16 +1767,6 @@ body {
 }
 
 /* Interactive Features CSS */
-/* Page Load Animation */
-body {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-body.page-loaded {
-    opacity: 1;
-}
-
 /* Scroll Reveal Animations */
 .animate-in {
     animation: slideInUp 0.8s ease forwards;

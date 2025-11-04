@@ -218,9 +218,6 @@ class PageTransitions {
     }
 
     setupTransitions() {
-        // Add fade-in on page load
-        document.body.classList.add('page-loaded');
-
         // Smooth anchor scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
