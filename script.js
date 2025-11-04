@@ -306,65 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Certifications Carousel
-    const certTrack = document.querySelector('.cert-track');
-    const certDots = document.querySelectorAll('.cert-dot');
-    const certArrowLeft = document.querySelector('.cert-arrow-left');
-    const certArrowRight = document.querySelector('.cert-arrow-right');
-    let currentCertIndex = 0;
-    const totalCerts = certDots.length;
-
-    function updateCertCarousel() {
-        if (certTrack) {
-            certTrack.style.transform = `translateX(-${currentCertIndex * 100}%)`;
-
-            // Update dots
-            certDots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentCertIndex);
-            });
-        }
-    }
-
-    function nextCert() {
-        currentCertIndex = (currentCertIndex + 1) % totalCerts;
-        updateCertCarousel();
-    }
-
-    function prevCert() {
-        currentCertIndex = (currentCertIndex - 1 + totalCerts) % totalCerts;
-        updateCertCarousel();
-    }
-
-    function goToCert(index) {
-        currentCertIndex = index;
-        updateCertCarousel();
-    }
-
-    // Arrow click handlers
-    if (certArrowLeft) {
-        certArrowLeft.addEventListener('click', prevCert);
-    }
-
-    if (certArrowRight) {
-        certArrowRight.addEventListener('click', nextCert);
-    }
-
-    // Dot click handlers
-    certDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToCert(index));
-    });
-
-    // Auto-advance carousel every 5 seconds
-    setInterval(nextCert, 5000);
-
-    // Keyboard navigation for carousel
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            prevCert();
-        } else if (e.key === 'ArrowRight') {
-            nextCert();
-        }
-    });
 
     console.log('Portfolio loaded successfully!');
 });

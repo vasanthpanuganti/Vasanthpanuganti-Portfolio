@@ -1535,53 +1535,77 @@ body.dark-theme .theme-toggle .moon-icon {
 }
 
 /* Certifications Section */
-/* Certifications Carousel Section */
 .certifications {
-    padding: 80px 20px;
+    padding: 80px 0;
     background: var(--bg-white);
-}
-
-.cert-carousel-wrapper {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.cert-carousel {
     overflow: hidden;
-    border-radius: 12px;
 }
 
-.cert-track {
+.certifications-header {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 3rem;
+}
+
+.certifications-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.certifications-scroll-container {
     display: flex;
-    transition: transform 0.5s ease;
+    gap: 2rem;
+    padding: 20px 40px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-light);
 }
 
-.certification-card-link {
-    text-decoration: none;
-    color: inherit;
-    min-width: 100%;
-    flex-shrink: 0;
+.certifications-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.certifications-scroll-container::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.certifications-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.certifications-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 .certification-card {
+    text-decoration: none;
+    color: inherit;
     background: var(--bg-white);
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     gap: 1.5rem;
-    align-items: flex-start;
-    height: 100%;
+    min-width: 350px;
+    width: 350px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
 }
 
 .certification-card:hover {
     border-color: var(--primary-color);
     box-shadow: 0 8px 24px rgba(24, 119, 242, 0.15);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 .cert-logo {
@@ -1595,6 +1619,7 @@ body.dark-theme .theme-toggle .moon-icon {
     align-items: center;
     justify-content: center;
     padding: 8px;
+    margin: 0 auto;
 }
 
 .cert-logo img {
@@ -1605,6 +1630,7 @@ body.dark-theme .theme-toggle .moon-icon {
 
 .cert-content {
     flex: 1;
+    text-align: center;
 }
 
 .cert-content h3 {
@@ -1632,70 +1658,6 @@ body.dark-theme .theme-toggle .moon-icon {
     font-size: 0.9375rem;
     color: var(--text-secondary);
     line-height: 1.6;
-}
-
-/* Carousel Arrows */
-.cert-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--bg-white);
-    border: 2px solid var(--border-color);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-    color: var(--text-primary);
-}
-
-.cert-arrow:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.cert-arrow-left {
-    left: 0;
-}
-
-.cert-arrow-right {
-    right: 0;
-}
-
-/* Carousel Dots */
-.cert-dots {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 2rem;
-}
-
-.cert-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--border-color);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0;
-}
-
-.cert-dot:hover {
-    background: var(--text-secondary);
-    transform: scale(1.2);
-}
-
-.cert-dot.active {
-    background: var(--primary-color);
-    width: 32px;
-    border-radius: 6px;
 }
 
 /* Extra Achievements Section */
@@ -2191,13 +2153,18 @@ body.dark-theme .theme-toggle .moon-icon {
     }
 
     .highlights-grid,
-    .certifications-grid,
     .achievements-grid {
         grid-template-columns: 1fr;
     }
 
-    .projects-scroll-container {
+    .projects-scroll-container,
+    .certifications-scroll-container {
         padding: 20px;
+    }
+
+    .certification-card {
+        min-width: 280px;
+        width: 280px;
     }
 
     .project-card {
@@ -2387,18 +2354,24 @@ body.dark-theme .theme-toggle .moon-icon {
 
     .career-highlights,
     .case-studies,
-    .certifications,
     .achievements,
     .contact {
         padding: 60px 20px;
     }
 
-    .projects {
+    .projects,
+    .certifications {
         padding: 60px 0;
     }
 
-    .projects-scroll-container {
+    .projects-scroll-container,
+    .certifications-scroll-container {
         padding: 20px 15px;
+    }
+
+    .certification-card {
+        min-width: 260px;
+        width: 260px;
     }
 
     .project-card {
