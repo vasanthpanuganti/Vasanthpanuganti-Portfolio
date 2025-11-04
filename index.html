@@ -10,18 +10,36 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Vasanth Panuganti</div>
+            <div class="nav-left">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <div class="logo">Vasanth Panuganti</div>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#career-highlights" class="nav-link">Highlights</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#case-studies" class="nav-link">Product Case Studies</a></li>
                 <li><a href="#work-history" class="nav-link">Experience</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#other-work" class="nav-link">Other Work</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -45,8 +63,7 @@
             </div>
             <div class="hero-image">
                 <div class="image-placeholder">
-                    <img src="assets/Profile.jpg" alt="Vasanth Panuganti" id="Profile-pic">
-                    <div class="image-overlay">Your Photo Here</div>
+                    <img src="assets/profile.jpg" alt="Vasanth Panuganti" id="Profile-pic">
                 </div>
             </div>
         </div>
@@ -244,10 +261,10 @@
         </div>
     </section>
 
-    <!-- Case Studies Section -->
+    <!-- Product Case Studies Section -->
     <section id="case-studies" class="case-studies">
         <div class="container">
-            <h2 class="section-title">Case Studies</h2>
+            <h2 class="section-title">Product Case Studies</h2>
             <p class="section-subtitle">Deep dives into my most impactful projects</p>
 
             <div class="case-studies-grid">
@@ -259,7 +276,7 @@
                     <div class="case-study-content-section">
                         <div class="case-study-header-new">
                             <div class="project-logo">
-                                <img src="assets/flipkart-logo.png" alt="Flipkart">
+                                <img src="assets/Flipkart.png" alt="Flipkart">
                             </div>
                             <div class="category-tags">
                                 <span class="category-tag">UX Design</span>
@@ -286,7 +303,7 @@
                     <div class="case-study-content-section">
                         <div class="case-study-header-new">
                             <div class="project-logo">
-                                <img src="assets/k12-logo.png" alt="K12">
+                                <img src="assets/K12.png" alt="K12">
                             </div>
                             <div class="category-tags">
                                 <span class="category-tag">EdTech</span>
@@ -313,7 +330,7 @@
                     <div class="case-study-content-section">
                         <div class="case-study-header-new">
                             <div class="project-logo">
-                                <img src="assets/byjus-logo.png" alt="Byju's">
+                                <img src="assets/Byjus-Logo.png" alt="Byju's">
                             </div>
                             <div class="category-tags">
                                 <span class="category-tag">Search</span>
@@ -332,72 +349,75 @@
                     </div>
                 </div>
             </div>
+
+            <div class="view-more-container">
+                <a href="#" class="view-more-btn">
+                    View More Case Studies
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Work History Section -->
     <section id="work-history" class="work-history">
         <div class="container">
-            <h2 class="work-history-title">Work history</h2>
+            <h2 class="work-history-title">Work History</h2>
 
             <div class="work-history-list">
                 <!-- Position 1 - K12 -->
                 <div class="work-item">
                     <div class="work-left">
-                        <h3 class="work-title">Product Manager (Personalization)</h3>
-                        <p class="work-description">Led personalized learning paths, adaptive quizzes, and ML-powered modules improving engagement by 25% and reducing dropout by 30%</p>
-                    </div>
-                    <div class="work-right">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="assets/K12.png" alt="K12 Logo">
-                            </div>
-                            <div class="company-details">
-                                <h4 class="company-name">K12</h4>
-                                <p class="work-dates">Jul 2025 - Present</p>
-                                <p class="work-location">Remote, US</p>
-                            </div>
+                        <div class="company-logo">
+                            <img src="assets/K12.png" alt="K12 Logo">
                         </div>
+                        <div class="company-details">
+                            <h3 class="company-name">K12</h3>
+                            <p class="work-dates">Jul 2025 – Present</p>
+                        </div>
+                    </div>
+                    <div class="work-divider"></div>
+                    <div class="work-right">
+                        <h3 class="work-title">Product Manager (Personalization)</h3>
+                        <p class="work-description">Led personalized learning paths, adaptive quizzes, and ML-powered modules improving engagement by 25% and reducing dropout by 30%.</p>
                     </div>
                 </div>
 
                 <!-- Position 2 - Flipkart -->
                 <div class="work-item">
                     <div class="work-left">
-                        <h3 class="work-title">Associate Product Manager (Search & Recommendation)</h3>
-                        <p class="work-description">Led search and recommendation improvements impacting 100M+ customers with +12% conversion uplift and +9% CTR increase</p>
-                    </div>
-                    <div class="work-right">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="assets/Flipkart.png" alt="Flipkart Logo">
-                            </div>
-                            <div class="company-details">
-                                <h4 class="company-name">Flipkart</h4>
-                                <p class="work-dates">Jan 2021 - Jun 2023</p>
-                                <p class="work-location">Bangalore, India</p>
-                            </div>
+                        <div class="company-logo">
+                            <img src="assets/Flipkart.png" alt="Flipkart Logo">
                         </div>
+                        <div class="company-details">
+                            <h3 class="company-name">Flipkart</h3>
+                            <p class="work-dates">Jan 2021 – Jun 2023</p>
+                        </div>
+                    </div>
+                    <div class="work-divider"></div>
+                    <div class="work-right">
+                        <h3 class="work-title">Associate Product Manager (Search & Recommendation)</h3>
+                        <p class="work-description">Led search and recommendation improvements impacting 100M+ customers with +12% conversion uplift and +9% CTR increase.</p>
                     </div>
                 </div>
 
                 <!-- Position 3 - Byju's -->
                 <div class="work-item">
                     <div class="work-left">
-                        <h3 class="work-title">Associate Product Manager Intern</h3>
-                        <p class="work-description">Owned personalization roadmap launching adaptive learning journeys that improved 7-day retention by 22%</p>
-                    </div>
-                    <div class="work-right">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="assets/Byjus-Logo.png" alt="Byju's Logo">
-                            </div>
-                            <div class="company-details">
-                                <h4 class="company-name">Byju's</h4>
-                                <p class="work-dates">May 2020 - Aug 2020</p>
-                                <p class="work-location">Remote, India</p>
-                            </div>
+                        <div class="company-logo">
+                            <img src="assets/Byjus-Logo.png" alt="Byju's Logo">
                         </div>
+                        <div class="company-details">
+                            <h3 class="company-name">Byju's</h3>
+                            <p class="work-dates">May 2020 – Aug 2020</p>
+                        </div>
+                    </div>
+                    <div class="work-divider"></div>
+                    <div class="work-right">
+                        <h3 class="work-title">Associate Product Manager Intern</h3>
+                        <p class="work-description">Owned personalization roadmap launching adaptive learning journeys that improved 7-day retention by 22%.</p>
                     </div>
                 </div>
             </div>
@@ -405,43 +425,41 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="resume">
+    <section id="education" class="education-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="resume-content">
-                <div class="resume-section">
-                    <div class="education-item">
-                        <div class="education-left">
-                            <h4>Master of Science, Engineering Management</h4>
-                            <p class="education-date">May 2025 | Tempe, AZ</p>
-                            <p class="education-description">Relevant Coursework: Product Design, Product Management, Data-Driven Decision Making, Advanced Project Management</p>
+            <h2 class="education-title">Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <div class="education-left">
+                        <div class="university-logo">
+                            <img src="assets/ASU.png" alt="Arizona State University Logo">
                         </div>
-                        <div class="education-right">
-                            <div class="university-info">
-                                <div class="university-logo">
-                                    <img src="assets/ASU.png" alt="Arizona State University Logo">
-                                </div>
-                                <div class="university-details">
-                                    <h5 class="university-name">Arizona State University</h5>
-                                </div>
-                            </div>
+                        <div class="university-details">
+                            <h3 class="university-name">Arizona State University</h3>
+                            <p class="education-dates">May 2025</p>
                         </div>
                     </div>
-                    <div class="education-item">
-                        <div class="education-left">
-                            <h4>Bachelor of Technology, Civil Engineering</h4>
-                            <p class="education-date">May 2021</p>
+                    <div class="education-divider"></div>
+                    <div class="education-right">
+                        <h3 class="education-degree">Master of Science, Engineering Management</h3>
+                        <p class="education-info">Relevant Coursework: Product Design, Product Management, Data-Driven Decision Making, Advanced Project Management</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-left">
+                        <div class="university-logo">
+                            <img src="assets/JNTU_Hyderabad.png" alt="JNTU Logo">
                         </div>
-                        <div class="education-right">
-                            <div class="university-info">
-                                <div class="university-logo">
-                                    <img src="assets/JNTU_Hyderabad.png" alt="JNTU Logo">
-                                </div>
-                                <div class="university-details">
-                                    <h5 class="university-name">Jawaharlal Nehru Technological University</h5>
-                                </div>
-                            </div>
+                        <div class="university-details">
+                            <h3 class="university-name">Jawaharlal Nehru Technological University</h3>
+                            <p class="education-dates">May 2021</p>
                         </div>
+                    </div>
+                    <div class="education-divider"></div>
+                    <div class="education-right">
+                        <h3 class="education-degree">Bachelor of Technology, Civil Engineering</h3>
+                        <p class="education-info">Focus on structural engineering and project management principles</p>
                     </div>
                 </div>
             </div>
@@ -549,106 +567,110 @@
     <section id="certifications" class="certifications">
         <div class="container">
             <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
-                    <div class="certification-card">
-                        <div class="cert-logo">
-                            <img src="assets/PMI-Symbol.png" alt="PMI Logo">
-                        </div>
-                        <div class="cert-content">
-                            <h3>Project Management Professional (PMP)</h3>
-                            <p class="cert-issuer">Project Management Institute (PMI)</p>
-                            <p class="cert-date">Active Certification</p>
-                            <p class="cert-id">Demonstrates expertise in project management across industries</p>
-                        </div>
-                    </div>
-                </a>
 
-                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
-                    <div class="certification-card">
-                        <div class="cert-logo">
-                            <img src="assets/scrum alliance.png" alt="Scrum Alliance Logo">
-                        </div>
-                        <div class="cert-content">
-                            <h3>Certified Scrum Product Owner (CSPO)</h3>
-                            <p class="cert-issuer">Scrum Alliance</p>
-                            <p class="cert-date">Active Certification</p>
-                            <p class="cert-id">Expertise in Agile product ownership and Scrum framework</p>
-                        </div>
+            <div class="cert-carousel-wrapper">
+                <button class="cert-arrow cert-arrow-left" aria-label="Previous certification">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="cert-carousel">
+                    <div class="cert-track">
+                        <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="certification-card">
+                                <div class="cert-logo">
+                                    <img src="assets/PMI-Symbol.png" alt="PMI Logo">
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Project Management Professional (PMP)</h3>
+                                    <p class="cert-issuer">Project Management Institute (PMI)</p>
+                                    <p class="cert-date">Active Certification</p>
+                                    <p class="cert-id">Demonstrates expertise in project management across industries</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="certification-card">
+                                <div class="cert-logo">
+                                    <img src="assets/scrum alliance.png" alt="Scrum Alliance Logo">
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Certified Scrum Product Owner (CSPO)</h3>
+                                    <p class="cert-issuer">Scrum Alliance</p>
+                                    <p class="cert-date">Active Certification</p>
+                                    <p class="cert-id">Expertise in Agile product ownership and Scrum framework</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="certification-card">
+                                <div class="cert-logo">
+                                    <img src="assets/Workato-logo.png" alt="Workato Logo">
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Automation Pro I</h3>
+                                    <p class="cert-issuer">Workato</p>
+                                    <p class="cert-date">Active Certification</p>
+                                    <p class="cert-id">Expertise in Automation</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
+                            <div class="certification-card">
+                                <div class="cert-logo">
+                                    <img src="assets/PMI-Symbol.png" alt="PMI Logo">
+                                </div>
+                                <div class="cert-content">
+                                    <h3>Generative AI Overview for Project Managers</h3>
+                                    <p class="cert-issuer">Project Management Institute (PMI)</p>
+                                    <p class="cert-date">Active Certification</p>
+                                    <p class="cert-id">Demonstrates expertise in project management with Gen AI</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+
+                <button class="cert-arrow cert-arrow-right" aria-label="Next certification">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="cert-dots">
+                <button class="cert-dot active" data-index="0" aria-label="Go to certification 1"></button>
+                <button class="cert-dot" data-index="1" aria-label="Go to certification 2"></button>
+                <button class="cert-dot" data-index="2" aria-label="Go to certification 3"></button>
+                <button class="cert-dot" data-index="3" aria-label="Go to certification 4"></button>
             </div>
         </div>
     </section>
-                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
-                    <div class="certification-card">
-                        <div class="cert-logo">
-                            <img src="assets/Workato-logo.png" alt="Workato Logo">
-                        </div>
-                        <div class="cert-content">
-                            <h3>Automation Pro I</h3>
-                            <p class="cert-issuer">Workato</p>
-                            <p class="cert-date">Active Certification</p>
-                            <p class="cert-id">Expertise in Automation</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-                <a href="#" class="certification-card-link" target="_blank" rel="noopener noreferrer">
-                    <div class="certification-card">
-                        <div class="cert-logo">
-                            <img src="assets/PMI-Symbol.png" alt="PMI Logo">
-                        </div>
-                        <div class="cert-content">
-                            <h3>Generative AI Overview for Project Managers</h3>
-                            <p class="cert-issuer">Project Management Institute (PMI)</p>
-                            <p class="cert-date">Active Certification</p>
-                            <p class="cert-id">Demonstrates expertise in project management across industries with the help of Gen AI</p>
-                        </div>
-                    </div>
-                </a>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
+    <!-- Other Work Experience Section -->
+    <section id="other-work" class="other-work">
         <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Achievement Title</h3>
-                    <p class="achievement-date">Year</p>
-                    <p class="achievement-description">Description of the achievement, what you accomplished, and its significance.</p>
+            <h2 class="other-work-title">Other Work Experience</h2>
+            <div class="other-work-list">
+                <div class="work-item">
+                    <div class="work-left">
+                        <div class="company-logo">
+                            <img src="assets/CSSC-GB-Final-v2.png" alt="Company Logo">
+                        </div>
+                        <div class="company-details">
+                            <h3 class="company-name">Previous Experience</h3>
+                            <p class="work-dates">Jan 2019 – Dec 2020</p>
+                        </div>
+                    </div>
+                    <div class="work-divider"></div>
+                    <div class="work-right">
+                        <h3 class="work-title">Product Analyst / Coordinator</h3>
+                        <p class="work-description">Supported product development initiatives, conducted market research, and coordinated cross-functional teams to deliver on project milestones.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -721,7 +743,7 @@
                 <!-- Answer Bubble (White with Avatar) -->
                 <div class="chat-response">
                     <div class="chat-avatar">
-                        <img src="assets/Profile.jpg" alt="Vasanth Panuganti">
+                        <img src="assets/profile.jpg" alt="Vasanth Panuganti">
                         <div class="avatar-placeholder">VP</div>
                     </div>
                     <div class="chat-bubble answer-bubble">

@@ -1,6 +1,33 @@
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+    }
+
+    // Theme toggle click handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-theme');
+
+            // Save theme preference
+            const theme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+
+            // Optional: Add a subtle animation
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg)';
+            }, 300);
+        });
+    }
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -276,6 +303,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (hero && scrolled < window.innerHeight) {
             hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+
+    // Certifications Carousel
+    const certTrack = document.querySelector('.cert-track');
+    const certDots = document.querySelectorAll('.cert-dot');
+    const certArrowLeft = document.querySelector('.cert-arrow-left');
+    const certArrowRight = document.querySelector('.cert-arrow-right');
+    let currentCertIndex = 0;
+    const totalCerts = certDots.length;
+
+    function updateCertCarousel() {
+        if (certTrack) {
+            certTrack.style.transform = `translateX(-${currentCertIndex * 100}%)`;
+
+            // Update dots
+            certDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentCertIndex);
+            });
+        }
+    }
+
+    function nextCert() {
+        currentCertIndex = (currentCertIndex + 1) % totalCerts;
+        updateCertCarousel();
+    }
+
+    function prevCert() {
+        currentCertIndex = (currentCertIndex - 1 + totalCerts) % totalCerts;
+        updateCertCarousel();
+    }
+
+    function goToCert(index) {
+        currentCertIndex = index;
+        updateCertCarousel();
+    }
+
+    // Arrow click handlers
+    if (certArrowLeft) {
+        certArrowLeft.addEventListener('click', prevCert);
+    }
+
+    if (certArrowRight) {
+        certArrowRight.addEventListener('click', nextCert);
+    }
+
+    // Dot click handlers
+    certDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToCert(index));
+    });
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(nextCert, 5000);
+
+    // Keyboard navigation for carousel
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevCert();
+        } else if (e.key === 'ArrowRight') {
+            nextCert();
         }
     });
 
