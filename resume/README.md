@@ -11,7 +11,7 @@ This folder contains your downloadable resume file.
 
 2. **Add to this folder**
    - Copy your PDF file to this `resume/` folder
-   - [Vasanth_Panuganti_Resume.pdf.pdf](https://github.com/user-attachments/files/23324886/Vasanth_Panuganti_Resume.pdf.pdf)
+   - [Vasanth_Panuganti_Resume.pdf](https://github.com/user-attachments/files/23343511/Vasanth_Panuganti_Resume.pdf)
    - Replace the placeholder file if it exists
 
 3. **The download button will automatically work**
