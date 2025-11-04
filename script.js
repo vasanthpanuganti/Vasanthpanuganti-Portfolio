@@ -203,10 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Dynamic year in footer
-    const footer = document.querySelector('.footer p');
-    if (footer) {
+    const copyrightElement = document.querySelector('.copyright');
+    if (copyrightElement) {
         const currentYear = new Date().getFullYear();
-        footer.textContent = `© ${currentYear} Vasanth Panuganti. All rights reserved.`;
+        copyrightElement.textContent = `© Copyright ${currentYear} Vasanth Panuganti`;
     }
 
     // Profile Image Error Handling
