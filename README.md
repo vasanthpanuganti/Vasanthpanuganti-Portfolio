@@ -12,7 +12,8 @@ Welcome to my professional portfolio website! This is a modern, responsive portf
   - Career Highlights
   - Detailed Resume
   - Project Showcase
-  - Work Products & Deliverables
+  - Certifications
+  - Extra Achievements
   - Contact Information
   - End Summary
 
@@ -99,9 +100,10 @@ Modify CSS variables in `styles.css`:
 2. **Career Highlights**: Key achievements in card format
 3. **Resume**: Detailed work experience, education, and skills
 4. **Projects**: Showcase your best work with descriptions and links
-5. **Work Products**: Display different types of deliverables
-6. **Contact**: Multiple ways to reach you with a contact form
-7. **End Summary**: Closing statement with call-to-action
+5. **Certifications**: Display your professional certifications and credentials
+6. **Extra Achievements**: Highlight special awards, recognitions, and accomplishments
+7. **Contact**: Multiple ways to reach you with a contact form
+8. **End Summary**: Closing statement with call-to-action
 
 ### Interactive Features
 - Scroll-to-top button

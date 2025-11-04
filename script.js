@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for fade-in effect
-    const animateElements = document.querySelectorAll('.highlight-card, .project-card, .product-card, .resume-item');
+    const animateElements = document.querySelectorAll('.highlight-card, .project-card, .certification-card, .achievement-card, .resume-item');
     animateElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
