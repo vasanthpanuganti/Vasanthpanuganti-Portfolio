@@ -14,7 +14,7 @@ Welcome to my professional portfolio website! This is a modern, responsive portf
   - Project Showcase
   - Case Studies (detailed project breakdowns)
   - Certifications
-  - Extra Achievements
+  - Achievements
   - Contact Information
   - End Summary
 
@@ -112,7 +112,7 @@ Modify CSS variables in `styles.css`:
 4. **Projects**: Showcase your best work with descriptions and links
 5. **Case Studies**: In-depth project analysis with problem, solution, and impact metrics
 6. **Certifications**: Display your professional certifications and credentials
-7. **Extra Achievements**: Highlight special awards, recognitions, and accomplishments
+7. **Achievements**: Highlight special awards, recognitions, and accomplishments
 8. **Contact**: Multiple ways to reach you with a contact form
 9. **End Summary**: Closing statement with call-to-action
 

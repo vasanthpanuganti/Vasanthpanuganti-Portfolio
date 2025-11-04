@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #7c3aed;
-    --accent-color: #06b6d4;
+    --primary-color: #10a6e2;
+    --secondary-color: #0d8abc;
+    --accent-color: #10a6e2;
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
-    --bg-light: #f9fafb;
+    --bg-light: #eef9fd;
     --bg-white: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-color: #d1e9f4;
+    --shadow: 0 1px 3px 0 rgba(16, 166, 226, 0.1), 0 1px 2px 0 rgba(16, 166, 226, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(16, 166, 226, 0.1), 0 2px 4px -1px rgba(16, 166, 226, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(16, 166, 226, 0.1), 0 4px 6px -2px rgba(16, 166, 226, 0.05);
 }
 
 html {
@@ -121,20 +121,20 @@ body {
 }
 
 .download-btn {
-    background: linear-gradient(135deg, #059669, #10b981);
+    background: linear-gradient(135deg, #10a6e2, #0d8abc);
     animation: pulse 2s infinite;
 }
 
 .download-btn:hover {
-    background: linear-gradient(135deg, #047857, #059669);
+    background: linear-gradient(135deg, #0d8abc, #0a6d95);
 }
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        box-shadow: 0 0 0 0 rgba(16, 166, 226, 0.7);
     }
     50% {
-        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+        box-shadow: 0 0 0 8px rgba(16, 166, 226, 0);
     }
 }
 
@@ -157,7 +157,7 @@ body {
 .hero {
     margin-top: 80px;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10a6e2 0%, #0d8abc 100%);
     color: white;
 }
 
@@ -402,7 +402,7 @@ body {
 
 .skill-category.nice-to-have {
     border-left-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(6, 182, 212, 0.02));
+    background: linear-gradient(135deg, rgba(16, 166, 226, 0.05), rgba(16, 166, 226, 0.02));
 }
 
 .skill-category-title {
@@ -1002,7 +1002,7 @@ body {
 /* End Summary Section */
 .end-summary {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #10a6e2 0%, #0d8abc 100%);
     color: white;
     text-align: center;
 }
