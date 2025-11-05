@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Optimization System - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-hero {
+            margin-bottom: 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .project-tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-pill {
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .project-section {
+            margin-bottom: 50px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .project-section p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-section ul li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .project-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">VP</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="project-detail-container">
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+        <div class="project-hero">
+            <h1>Search Optimization System</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Search Engineer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duration</span>
+                    <span class="meta-value">5 months</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">4 members</span>
+                </div>
+            </div>
+            <div class="project-tech-stack">
+                <span class="tech-pill">Elasticsearch</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">BERT</span>
+                <span class="tech-pill">Kubernetes</span>
+                <span class="tech-pill">Apache Spark</span>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <p>
+                Engineered a cutting-edge search optimization system that dramatically improved search relevance and user experience for a large-scale e-commerce platform. The system combines traditional information retrieval techniques with modern NLP and machine learning to deliver highly relevant results in milliseconds.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>The Challenge</h2>
+            <p>
+                The existing search system was plagued with issues that directly impacted revenue and user satisfaction:
+            </p>
+            <ul>
+                <li>Poor relevance: Users couldn't find products even when using exact names</li>
+                <li>No semantic understanding: Searches for "running shoes" wouldn't return "sneakers"</li>
+                <li>Slow performance: Search latency exceeded 2 seconds during peak traffic</li>
+                <li>Limited personalization: All users saw identical results regardless of preferences</li>
+                <li>Weak spell correction: Typos and misspellings led to zero results</li>
+                <li>No support for natural language queries like "red dress under $50"</li>
+            </ul>
+            <p>
+                Analytics showed that 40% of searches resulted in no clicks, indicating severe relevance problems.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Solution & Implementation</h2>
+
+            <h3>1. Advanced Indexing Strategy</h3>
+            <p>
+                Redesigned the search index architecture for optimal performance and relevance:
+            </p>
+            <ul>
+                <li>Elasticsearch cluster with 20+ nodes for horizontal scalability</li>
+                <li>Custom analyzers for text processing (tokenization, stemming, n-grams)</li>
+                <li>Multi-field mapping strategy (exact match, fuzzy match, phonetic)</li>
+                <li>Nested documents for variant products and attributes</li>
+                <li>Real-time index updates via Kafka event streams</li>
+                <li>Index optimization with sharding and replication strategies</li>
+            </ul>
+
+            <h3>2. Semantic Search with NLP</h3>
+            <p>
+                Integrated neural language models for understanding user intent:
+            </p>
+            <ul>
+                <li>Fine-tuned BERT model for product-query semantic matching</li>
+                <li>Vector similarity search using dense embeddings</li>
+                <li>Query expansion with synonyms and related terms</li>
+                <li>Intent classification (navigational, informational, transactional)</li>
+                <li>Entity recognition for brands, colors, sizes, and attributes</li>
+            </ul>
+
+            <h3>3. Learning to Rank (LTR)</h3>
+            <p>
+                Implemented ML-based ranking to optimize result ordering:
+            </p>
+            <ul>
+                <li>Feature engineering from query, document, and user signals (100+ features)</li>
+                <li>Gradient boosted decision trees (XGBoost) for ranking model</li>
+                <li>Click-through rate prediction as primary ranking signal</li>
+                <li>Personalization features based on user history and preferences</li>
+                <li>A/B testing framework for continuous model improvement</li>
+            </ul>
+
+            <h3>4. Query Understanding Pipeline</h3>
+            <p>
+                Built sophisticated query processing to handle diverse user inputs:
+            </p>
+            <ul>
+                <li>Spell correction using custom dictionary and edit distance algorithms</li>
+                <li>Query segmentation and tokenization</li>
+                <li>Price and numeric filter extraction ("under $50", "5 stars")</li>
+                <li>Color and size normalization ("large" → "L")</li>
+                <li>Brand name disambiguation and autocorrection</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Innovation</h4>
+            <p>
+                Developed a hybrid search approach combining Elasticsearch's BM25 algorithm with BERT-based semantic search. The system intelligently routes queries: simple keyword searches use BM25 for speed, while complex natural language queries leverage neural models for accuracy.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Technical Architecture</h2>
+
+            <h3>Search Pipeline</h3>
+            <p>
+                Designed a multi-stage search pipeline for optimal balance of speed and accuracy:
+            </p>
+            <ul>
+                <li><strong>Stage 1 - Retrieval:</strong> Elasticsearch retrieves top 1000 candidates using BM25</li>
+                <li><strong>Stage 2 - Reranking:</strong> ML model reranks top 500 results</li>
+                <li><strong>Stage 3 - Personalization:</strong> User-specific boosting applied to top 100</li>
+                <li><strong>Stage 4 - Business Rules:</strong> Promotions, inventory, and merchandising rules</li>
+            </ul>
+
+            <h3>Infrastructure & Scalability</h3>
+            <p>
+                Built on cloud-native infrastructure for reliability and scale:
+            </p>
+            <ul>
+                <li>Kubernetes orchestration for auto-scaling during traffic spikes</li>
+                <li>Elasticsearch cluster with automated failover and recovery</li>
+                <li>Redis caching layer for frequent queries (80% cache hit rate)</li>
+                <li>Apache Spark for offline batch processing and model training</li>
+                <li>Kafka for real-time data pipeline (inventory, prices, clicks)</li>
+                <li>Prometheus and Grafana for monitoring and alerting</li>
+            </ul>
+
+            <h3>Feature Engineering</h3>
+            <p>
+                Extracted rich features for the ranking model:
+            </p>
+            <ul>
+                <li><strong>Query features:</strong> Length, word count, category hints, intent type</li>
+                <li><strong>Document features:</strong> Price, ratings, reviews, sales rank, inventory</li>
+                <li><strong>Match features:</strong> BM25 score, title match, description match, exact match</li>
+                <li><strong>User features:</strong> Click history, purchase history, browsing behavior</li>
+                <li><strong>Context features:</strong> Time of day, device type, location</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">56%</div>
+                    <div class="metric-label">Increase in Click-Through Rate</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">38%</div>
+                    <div class="metric-label">Boost in Conversion from Search</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">65ms</div>
+                    <div class="metric-label">Average Search Latency (p95)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">92%</div>
+                    <div class="metric-label">Zero-Result Rate Reduction</div>
+                </div>
+            </div>
+
+            <h3>Business Impact</h3>
+            <ul>
+                <li>Search-driven revenue increased by $8.5M annually</li>
+                <li>Reduced bounce rate from search results by 42%</li>
+                <li>Improved user satisfaction scores (NPS) by 18 points</li>
+                <li>Decreased "search-to-filter" behavior by 35% (better initial results)</li>
+                <li>Zero-result searches dropped from 12% to less than 1%</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Advanced Features</h2>
+
+            <h3>Autocomplete & Suggestions</h3>
+            <p>
+                Implemented intelligent query suggestions:
+            </p>
+            <ul>
+                <li>Real-time autocomplete with sub-50ms latency</li>
+                <li>Trending searches based on recent user behavior</li>
+                <li>Personalized suggestions based on user history</li>
+                <li>Category-aware completions</li>
+                <li>Spell-corrected suggestions</li>
+            </ul>
+
+            <h3>Faceted Search & Filters</h3>
+            <p>
+                Enhanced filtering capabilities:
+            </p>
+            <ul>
+                <li>Dynamic facet generation based on search results</li>
+                <li>Multi-select filters with AND/OR logic</li>
+                <li>Range filters for price, ratings, and numeric attributes</li>
+                <li>Smart facet ordering based on popularity and relevance</li>
+                <li>Facet value counts updated in real-time</li>
+            </ul>
+
+            <h3>Search Analytics</h3>
+            <p>
+                Built comprehensive analytics dashboard:
+            </p>
+            <ul>
+                <li>Top searches and trending queries</li>
+                <li>Zero-result searches for content gap analysis</li>
+                <li>Click-through and conversion funnel tracking</li>
+                <li>A/B test results and statistical significance</li>
+                <li>Performance monitoring (latency, error rates, cache hit rates)</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Balancing Relevance and Business Goals</h3>
+            <p>
+                Learned to navigate the tension between pure relevance and business objectives:
+            </p>
+            <ul>
+                <li>Transparent boosting of promoted products without hurting trust</li>
+                <li>Inventory-aware ranking to prevent featuring out-of-stock items</li>
+                <li>Margin-based ranking balanced against user satisfaction</li>
+                <li>A/B testing to measure long-term impact vs. short-term metrics</li>
+            </ul>
+
+            <h3>Real-Time vs. Batch Processing</h3>
+            <p>
+                Architected a hybrid approach for different data freshness needs:
+            </p>
+            <ul>
+                <li>Real-time updates for inventory and pricing via Kafka</li>
+                <li>Batch updates for product content and attributes (hourly)</li>
+                <li>Click data aggregated in micro-batches (every 5 minutes)</li>
+                <li>Model retraining on daily schedule with rollback capability</li>
+            </ul>
+
+            <h3>Managing Elasticsearch at Scale</h3>
+            <p>
+                Overcame operational challenges with large-scale Elasticsearch:
+            </p>
+            <ul>
+                <li>Shard sizing optimization to prevent hotspots</li>
+                <li>Index lifecycle management for historical data</li>
+                <li>Circuit breakers to prevent cluster overload</li>
+                <li>Blue-green deployments for zero-downtime updates</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Takeaway</h4>
+            <p>
+                Search is not a "set and forget" system. Continuous monitoring, experimentation, and iteration are essential. User behavior changes, catalogs evolve, and new query patterns emerge. Building robust analytics and A/B testing infrastructure from day one enables data-driven optimization.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Future Enhancements</h2>
+            <ul>
+                <li>Visual search using computer vision for image-based queries</li>
+                <li>Voice search optimization for mobile users</li>
+                <li>Multilingual search with cross-language retrieval</li>
+                <li>Session-based search understanding for query reformulation</li>
+                <li>Question answering for customer support integration</li>
+                <li>Real-time personalization using reinforcement learning</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

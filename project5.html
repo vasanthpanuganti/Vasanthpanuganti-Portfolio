@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-hero {
+            margin-bottom: 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .project-tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-pill {
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .project-section {
+            margin-bottom: 50px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .project-section p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-section ul li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .project-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">VP</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="project-detail-container">
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+        <div class="project-hero">
+            <h1>Data Analytics Dashboard</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Senior Data Analyst</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duration</span>
+                    <span class="meta-value">6 months</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">4 members</span>
+                </div>
+            </div>
+            <div class="project-tech-stack">
+                <span class="tech-pill">Tableau</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Airflow</span>
+                <span class="tech-pill">Redshift</span>
+                <span class="tech-pill">D3.js</span>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <p>
+                Designed and built a comprehensive real-time analytics dashboard that transformed how executive leadership and business teams make data-driven decisions. The dashboard consolidates data from 15+ sources, providing actionable insights across all business functions from a single unified platform.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>The Challenge</h2>
+            <p>
+                The organization was drowning in data but starving for insights:
+            </p>
+            <ul>
+                <li>Data scattered across 15+ disconnected systems and databases</li>
+                <li>Executive team making decisions based on week-old reports</li>
+                <li>Manual reporting consuming 120+ analyst hours per week</li>
+                <li>No single source of truth leading to conflicting numbers</li>
+                <li>Complex queries taking 30+ minutes to run during peak hours</li>
+                <li>Limited self-service capabilities requiring analyst intervention for basic questions</li>
+                <li>Mobile access non-existent, limiting decision-making flexibility</li>
+            </ul>
+            <p>
+                Leadership needed real-time visibility into business performance to respond quickly to market changes and opportunities.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Solution & Implementation</h2>
+
+            <h3>1. Data Integration & ETL Pipeline</h3>
+            <p>
+                Built a robust data infrastructure to consolidate disparate sources:
+            </p>
+            <ul>
+                <li>Designed ETL pipelines using Apache Airflow for automated data ingestion</li>
+                <li>Integrated 15+ data sources (CRM, ERP, analytics, marketing, support)</li>
+                <li>Implemented data quality checks and validation rules</li>
+                <li>Created staging, transformation, and production data layers</li>
+                <li>Built incremental loading for performance optimization</li>
+                <li>Established data governance and lineage tracking</li>
+            </ul>
+
+            <h3>2. Data Warehouse Architecture</h3>
+            <p>
+                Designed a scalable data warehouse on Amazon Redshift:
+            </p>
+            <ul>
+                <li>Star schema design for optimal query performance</li>
+                <li>Fact tables for transactions, events, and metrics</li>
+                <li>Dimension tables for customers, products, time, geography</li>
+                <li>Slowly Changing Dimensions (SCD) for historical tracking</li>
+                <li>Aggregate tables for common, complex queries</li>
+                <li>Partitioning strategy by date for efficient data management</li>
+            </ul>
+
+            <h3>3. Interactive Dashboard Development</h3>
+            <p>
+                Created intuitive, interactive dashboards in Tableau:
+            </p>
+            <ul>
+                <li>Executive dashboard with key business metrics (North Star metrics)</li>
+                <li>Sales performance tracking with drill-down capabilities</li>
+                <li>Marketing ROI and campaign effectiveness analysis</li>
+                <li>Customer behavior and cohort analysis</li>
+                <li>Product performance and inventory optimization</li>
+                <li>Financial metrics and forecasting</li>
+            </ul>
+
+            <h3>4. Real-Time Data Processing</h3>
+            <p>
+                Implemented near real-time data updates for critical metrics:
+            </p>
+            <ul>
+                <li>Streaming data ingestion for website analytics</li>
+                <li>15-minute refresh cycles for sales and inventory data</li>
+                <li>Hourly updates for marketing and customer data</li>
+                <li>Real-time alerts for anomalies and threshold breaches</li>
+                <li>Event-driven updates for critical business events</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Innovation</h4>
+            <p>
+                Developed a "Smart Insights" feature using Python that automatically detects significant trends, anomalies, and patterns in the data. The system generates natural language summaries and proactively alerts stakeholders to notable changes - turning reactive reporting into proactive intelligence.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Dashboard Features</h2>
+
+            <h3>Executive Dashboard</h3>
+            <p>
+                High-level KPI tracking for C-suite:
+            </p>
+            <ul>
+                <li>Revenue, profit, and growth metrics with YoY and MoM comparisons</li>
+                <li>Customer acquisition and retention metrics</li>
+                <li>Operational efficiency indicators</li>
+                <li>Market share and competitive positioning</li>
+                <li>Strategic initiative tracking</li>
+                <li>Predictive forecasts using ML models</li>
+            </ul>
+
+            <h3>Sales Analytics</h3>
+            <p>
+                Comprehensive sales performance tracking:
+            </p>
+            <ul>
+                <li>Individual rep performance vs. quota</li>
+                <li>Pipeline health and conversion funnel analysis</li>
+                <li>Deal velocity and sales cycle metrics</li>
+                <li>Territory and regional performance comparison</li>
+                <li>Product mix and upsell/cross-sell analysis</li>
+                <li>Win/loss analysis and competitive intelligence</li>
+            </ul>
+
+            <h3>Customer Analytics</h3>
+            <p>
+                Deep insights into customer behavior:
+            </p>
+            <ul>
+                <li>Customer lifetime value (LTV) segmentation</li>
+                <li>Cohort retention analysis</li>
+                <li>Churn prediction and at-risk customer identification</li>
+                <li>Customer journey mapping and touchpoint analysis</li>
+                <li>Product usage patterns and feature adoption</li>
+                <li>NPS and satisfaction score tracking</li>
+            </ul>
+
+            <h3>Marketing Performance</h3>
+            <p>
+                ROI tracking across all marketing channels:
+            </p>
+            <ul>
+                <li>Multi-touch attribution modeling</li>
+                <li>Campaign performance by channel (paid, organic, social, email)</li>
+                <li>Cost per acquisition and marketing efficiency ratio</li>
+                <li>Content performance and engagement metrics</li>
+                <li>Lead quality scoring and conversion rates</li>
+                <li>SEO performance and organic traffic trends</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Technical Implementation</h2>
+
+            <h3>Data Processing Pipeline</h3>
+            <p>
+                Architected for reliability and scalability:
+            </p>
+            <ul>
+                <li>Apache Airflow DAGs for orchestration and scheduling</li>
+                <li>Python scripts for data extraction and transformation</li>
+                <li>SQL stored procedures for complex business logic</li>
+                <li>Error handling and automatic retry mechanisms</li>
+                <li>Logging and monitoring using CloudWatch</li>
+                <li>Data quality checks at each pipeline stage</li>
+            </ul>
+
+            <h3>Performance Optimization</h3>
+            <p>
+                Achieved sub-second query response times:
+            </p>
+            <ul>
+                <li>Indexing strategy on frequently filtered columns</li>
+                <li>Materialized views for complex, frequent queries</li>
+                <li>Query result caching in Tableau</li>
+                <li>Redshift distribution keys for optimal data placement</li>
+                <li>Sort keys for range queries on time dimensions</li>
+                <li>Workload management (WLM) for query prioritization</li>
+            </ul>
+
+            <h3>Security & Access Control</h3>
+            <p>
+                Implemented robust security measures:
+            </p>
+            <ul>
+                <li>Role-based access control (RBAC) in Tableau</li>
+                <li>Row-level security for data segregation</li>
+                <li>Encryption at rest and in transit</li>
+                <li>Audit logging for compliance</li>
+                <li>VPN access for external users</li>
+                <li>Data masking for sensitive PII</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">92%</div>
+                    <div class="metric-label">Reduction in Manual Reporting Time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3.5x</div>
+                    <div class="metric-label">Faster Decision Making</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">500+</div>
+                    <div class="metric-label">Daily Active Users</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Data Accuracy Improvement</div>
+                </div>
+            </div>
+
+            <h3>Business Impact</h3>
+            <ul>
+                <li>Reduced time from data to decision from 1 week to real-time</li>
+                <li>Freed up 110 hours per week of analyst time for strategic work</li>
+                <li>Identified $2.3M in cost savings through operational insights</li>
+                <li>Improved forecast accuracy by 35% with better data visibility</li>
+                <li>Increased revenue by 18% through data-driven optimization</li>
+                <li>Dashboard adopted by 500+ employees across all departments</li>
+            </ul>
+
+            <h3>Organizational Impact</h3>
+            <ul>
+                <li>Created a data-driven culture with metrics accessible to all</li>
+                <li>Eliminated data silos and established single source of truth</li>
+                <li>Empowered non-technical users with self-service analytics</li>
+                <li>Improved cross-functional collaboration through shared metrics</li>
+                <li>Accelerated onboarding with standardized reporting</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>User Adoption Strategy</h2>
+
+            <h3>Training & Enablement</h3>
+            <p>
+                Ensured successful adoption across the organization:
+            </p>
+            <ul>
+                <li>Created role-specific training programs and documentation</li>
+                <li>Conducted live training sessions for all departments</li>
+                <li>Built video tutorial library for self-paced learning</li>
+                <li>Established office hours for Q&A and support</li>
+                <li>Created dashboard champions in each department</li>
+                <li>Developed quick reference guides and FAQs</li>
+            </ul>
+
+            <h3>Iterative Improvement</h3>
+            <p>
+                Continuously enhanced based on user feedback:
+            </p>
+            <ul>
+                <li>Monthly user feedback sessions</li>
+                <li>Usage analytics to identify underutilized features</li>
+                <li>Quarterly roadmap planning with stakeholders</li>
+                <li>Rapid prototyping of new dashboard requests</li>
+                <li>A/B testing of dashboard layouts and visualizations</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Data Quality Issues</h3>
+            <p>
+                Addressed inconsistencies in source systems:
+            </p>
+            <ul>
+                <li>Implemented automated data quality checks</li>
+                <li>Created data stewards responsible for source system quality</li>
+                <li>Built reconciliation reports to identify discrepancies</li>
+                <li>Established data governance council for standards</li>
+            </ul>
+
+            <h3>Managing Stakeholder Expectations</h3>
+            <p>
+                Balanced diverse needs across departments:
+            </p>
+            <ul>
+                <li>Started with MVP focused on highest-impact use cases</li>
+                <li>Prioritized features using RICE scoring framework</li>
+                <li>Set clear SLAs for dashboard performance and data freshness</li>
+                <li>Regular communication on roadmap and progress</li>
+            </ul>
+
+            <h3>Scaling Complexity</h3>
+            <p>
+                Managed growing dashboard ecosystem:
+            </p>
+            <ul>
+                <li>Created naming conventions and organization structure</li>
+                <li>Implemented version control for dashboard definitions</li>
+                <li>Built centralized data dictionary for metric definitions</li>
+                <li>Established governance process for new dashboard requests</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Takeaway</h4>
+            <p>
+                The best dashboards don't just display data - they tell a story and drive action. Focus on answering specific business questions rather than showing all available data. Less is often more when it comes to effective data visualization.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Future Enhancements</h2>
+            <ul>
+                <li>Integration with AI for natural language querying (ask questions in plain English)</li>
+                <li>Predictive analytics and machine learning models embedded in dashboards</li>
+                <li>Mobile app for on-the-go access to key metrics</li>
+                <li>Automated anomaly detection with root cause analysis</li>
+                <li>Prescriptive recommendations for business optimization</li>
+                <li>Real-time collaboration features for shared analysis</li>
+                <li>Integration with Slack/Teams for metric alerts and summaries</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

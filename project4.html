@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Engagement Boost - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-hero {
+            margin-bottom: 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .project-tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tech-pill {
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .project-section {
+            margin-bottom: 50px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .project-section p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-section ul li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .project-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">VP</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="project-detail-container">
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+        <div class="project-hero">
+            <h1>Mobile App Engagement Boost</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Product Analytics Lead</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duration</span>
+                    <span class="meta-value">4 months</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">6 members</span>
+                </div>
+            </div>
+            <div class="project-tech-stack">
+                <span class="tech-pill">React Native</span>
+                <span class="tech-pill">Firebase</span>
+                <span class="tech-pill">BigQuery</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Tableau</span>
+                <span class="tech-pill">Amplitude</span>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <p>
+                Led a comprehensive data-driven initiative to increase user engagement and retention for a mobile education app with 2M+ users. Through rigorous analysis, experimentation, and feature optimization, we transformed user behavior patterns and significantly improved key business metrics.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>The Challenge</h2>
+            <p>
+                The mobile app was experiencing troubling engagement and retention metrics despite strong acquisition numbers:
+            </p>
+            <ul>
+                <li>Day 7 retention rate was only 18% (industry benchmark: 35%+)</li>
+                <li>Average session length: 3.2 minutes (target: 8+ minutes)</li>
+                <li>Daily active users (DAU) declining month-over-month</li>
+                <li>Push notification opt-in rate: 28% (too low for effective re-engagement)</li>
+                <li>Feature adoption was uneven - some key features had <5% usage</li>
+                <li>User feedback indicated confusion with navigation and onboarding</li>
+            </ul>
+            <p>
+                The business was spending heavily on user acquisition while losing users just as quickly due to poor retention.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Solution & Implementation</h2>
+
+            <h3>1. Comprehensive Analytics Foundation</h3>
+            <p>
+                Established robust analytics infrastructure to understand user behavior:
+            </p>
+            <ul>
+                <li>Implemented event tracking across all user touchpoints (200+ events)</li>
+                <li>Built user segmentation based on behavior, demographics, and engagement level</li>
+                <li>Created cohort analysis framework to track retention over time</li>
+                <li>Funnel analysis for key user journeys (onboarding, lesson completion, etc.)</li>
+                <li>Set up automated dashboards in Tableau for stakeholder visibility</li>
+                <li>Integrated Firebase Analytics and Amplitude for real-time insights</li>
+            </ul>
+
+            <h3>2. User Research & Pain Point Identification</h3>
+            <p>
+                Conducted extensive research to uncover root causes of low engagement:
+            </p>
+            <ul>
+                <li>In-depth user interviews with 50+ users (both active and churned)</li>
+                <li>Session recordings and heatmap analysis to identify friction points</li>
+                <li>Survey campaigns to gather quantitative feedback (2,000+ responses)</li>
+                <li>Competitive analysis of top-performing education apps</li>
+                <li>Crash and error log analysis to identify technical issues</li>
+            </ul>
+
+            <h3>3. Onboarding Optimization</h3>
+            <p>
+                Redesigned the onboarding flow based on data insights:
+            </p>
+            <ul>
+                <li>Reduced steps from 9 to 4 by removing unnecessary friction</li>
+                <li>Added interactive tutorial showcasing core value proposition</li>
+                <li>Implemented progress indicators to reduce drop-off</li>
+                <li>Personalized onboarding based on user goals and skill level</li>
+                <li>Added "skip for now" options for non-essential steps</li>
+                <li>A/B tested different onboarding variations</li>
+            </ul>
+
+            <h3>4. Personalized Engagement Strategy</h3>
+            <p>
+                Built intelligent systems to keep users engaged:
+            </p>
+            <ul>
+                <li>Smart push notifications based on user activity patterns</li>
+                <li>Personalized content recommendations using ML algorithms</li>
+                <li>Daily streak tracking with motivational rewards</li>
+                <li>Achievement system with unlockable badges and milestones</li>
+                <li>Social features: peer challenges and leaderboards</li>
+                <li>Adaptive difficulty to maintain optimal challenge level</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Innovation</h4>
+            <p>
+                Developed a predictive churn model that identifies at-risk users 7 days before likely churn. This enabled proactive intervention through targeted communications, personalized offers, and feature suggestions - recovering 35% of would-be churned users.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Feature Optimization</h2>
+
+            <h3>Navigation Redesign</h3>
+            <p>
+                Simplified app navigation based on user flow analysis:
+            </p>
+            <ul>
+                <li>Reduced primary navigation from 6 tabs to 4 most-used sections</li>
+                <li>Implemented bottom navigation for thumb-friendly access</li>
+                <li>Added search functionality for quick content discovery</li>
+                <li>Created contextual shortcuts based on user behavior</li>
+                <li>Improved information architecture with card sorting studies</li>
+            </ul>
+
+            <h3>Performance Optimization</h3>
+            <p>
+                Technical improvements to enhance user experience:
+            </p>
+            <ul>
+                <li>Reduced app startup time from 4.2s to 1.8s</li>
+                <li>Optimized image loading with lazy loading and compression</li>
+                <li>Implemented offline mode for uninterrupted learning</li>
+                <li>Fixed critical crashes affecting 8% of users</li>
+                <li>Reduced app size by 40% through code optimization</li>
+            </ul>
+
+            <h3>Content Strategy</h3>
+            <p>
+                Enhanced content delivery and discovery:
+            </p>
+            <ul>
+                <li>Personalized home feed showing relevant content</li>
+                <li>Learning paths tailored to user goals</li>
+                <li>Bite-sized content formats for mobile consumption</li>
+                <li>Interactive elements to increase active learning</li>
+                <li>Progress tracking with visual representations</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Experimentation Framework</h2>
+
+            <h3>A/B Testing Program</h3>
+            <p>
+                Implemented rigorous experimentation methodology:
+            </p>
+            <ul>
+                <li>Established A/B testing infrastructure using Firebase Remote Config</li>
+                <li>Ran 30+ experiments over 4 months</li>
+                <li>Statistical significance testing with proper sample sizes</li>
+                <li>Guardrail metrics to prevent negative side effects</li>
+                <li>Documentation of all experiments and learnings</li>
+            </ul>
+
+            <h3>Key Experiments</h3>
+            <p>
+                Notable experiments and their outcomes:
+            </p>
+            <ul>
+                <li><strong>Push notification timing:</strong> Sending at personalized optimal times increased open rates by 52%</li>
+                <li><strong>Gamification elements:</strong> Streak counter improved Day 7 retention by 23%</li>
+                <li><strong>Social proof:</strong> Showing peer progress increased lesson completion by 31%</li>
+                <li><strong>Reward frequency:</strong> Daily rewards outperformed weekly by 18% in engagement</li>
+                <li><strong>Onboarding length:</strong> Shorter flow increased completion by 44%</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">142%</div>
+                    <div class="metric-label">Increase in Day 7 Retention</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">89%</div>
+                    <div class="metric-label">Increase in Session Length</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3.2x</div>
+                    <div class="metric-label">Growth in DAU/MAU Ratio</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">67%</div>
+                    <div class="metric-label">Increase in Push Opt-in Rate</div>
+                </div>
+            </div>
+
+            <h3>Detailed Metrics Improvement</h3>
+            <ul>
+                <li>Day 7 retention: 18% → 43% (142% increase)</li>
+                <li>Day 30 retention: 8% → 22% (175% increase)</li>
+                <li>Average session length: 3.2 min → 6.1 min (89% increase)</li>
+                <li>DAU/MAU ratio: 0.15 → 0.48 (220% increase)</li>
+                <li>Onboarding completion: 52% → 75% (44% increase)</li>
+                <li>Push notification opt-in: 28% → 47% (67% increase)</li>
+                <li>Feature adoption rate: Increased by average of 156% across key features</li>
+            </ul>
+
+            <h3>Business Impact</h3>
+            <ul>
+                <li>Reduced customer acquisition cost (CAC) by improving LTV/CAC ratio from 1.8 to 3.5</li>
+                <li>Increased monthly recurring revenue by 85% through improved retention</li>
+                <li>Reduced churn rate from 45% to 22% monthly</li>
+                <li>App Store rating improved from 3.8 to 4.6 stars</li>
+                <li>Decreased customer support tickets by 32% through UX improvements</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Data-Driven Insights</h2>
+
+            <h3>User Segmentation Findings</h3>
+            <p>
+                Discovered distinct user segments with different needs:
+            </p>
+            <ul>
+                <li><strong>Goal-Driven Learners (35%):</strong> Motivated by achievement and progress tracking</li>
+                <li><strong>Social Learners (28%):</strong> Engaged by competition and peer interaction</li>
+                <li><strong>Casual Browsers (22%):</strong> Required bite-sized, low-commitment content</li>
+                <li><strong>Intensive Users (15%):</strong> Power users needing advanced features</li>
+            </ul>
+
+            <h3>Behavioral Patterns</h3>
+            <p>
+                Uncovered key insights about user behavior:
+            </p>
+            <ul>
+                <li>Users who completed onboarding had 4.2x higher Day 30 retention</li>
+                <li>Optimal push notification frequency: 3-4 per week (more = higher unsubscribes)</li>
+                <li>Peak engagement times: 7-9am and 8-10pm</li>
+                <li>Users who formed a 7-day streak had 85% chance of reaching Day 30</li>
+                <li>Social features increased session length by 2.3x</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Balancing Features vs. Simplicity</h3>
+            <p>
+                Learned the importance of restraint in feature development:
+            </p>
+            <ul>
+                <li>More features don't always mean better engagement</li>
+                <li>Focus on core value proposition before adding nice-to-haves</li>
+                <li>Regular feature audits to remove unused functionality</li>
+                <li>Progressive disclosure: reveal advanced features to engaged users</li>
+            </ul>
+
+            <h3>Statistical Rigor in Experimentation</h3>
+            <p>
+                Developed best practices for A/B testing:
+            </p>
+            <ul>
+                <li>Avoid peeking at results before reaching statistical significance</li>
+                <li>Account for novelty effects in long-term experiments</li>
+                <li>Monitor for Simpson's paradox in segmented analysis</li>
+                <li>Document negative results to prevent repeated testing</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Key Takeaway</h4>
+            <p>
+                Sustainable engagement comes from understanding why users value your product, not just adding features. The most impactful changes were often the simplest: reducing friction, providing clear value, and respecting user time.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Future Roadmap</h2>
+            <ul>
+                <li>Implement AI-powered learning assistant for personalized guidance</li>
+                <li>Expand social features with study groups and live sessions</li>
+                <li>Build advanced analytics for educators and parents</li>
+                <li>Create offline-first architecture for emerging markets</li>
+                <li>Develop predictive models for optimal learning schedules</li>
+                <li>Integration with wearables for learning habit tracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
