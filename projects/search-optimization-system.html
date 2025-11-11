@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Optimization System - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .project-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .project-detail-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .project-section {
+            margin-bottom: 60px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            color: var(--text-heading);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-section p {
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .project-section ul, .project-section ol {
+            color: var(--text-body);
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .project-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Vasanth Panuganti</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <h1>Search Optimization System</h1>
+        <p>Revamped search algorithm with NLP-based query understanding achieving 12% higher conversion and 9% CTR increase for 100M+ users</p>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <!-- Overview -->
+        <section class="project-section">
+            <h2>Project Overview</h2>
+            <p>At Byju's, I led a comprehensive overhaul of the search system, transforming it from a basic keyword-matching engine to an intelligent, NLP-powered search platform. The new system understands user intent, handles natural language queries, and delivers personalized, contextually relevant results that significantly improved user experience and conversion rates.</p>
+
+            <div class="highlight-box">
+                <p><strong>Impact:</strong> Achieved 12% increase in search-to-purchase conversion rate, 9% improvement in click-through rates, and reduced zero-result searches by 45% across the platform serving 100M+ users.</p>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="project-section">
+            <h2>Key Metrics & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">+12%</div>
+                    <div class="metric-label">Conversion Rate Increase</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+9%</div>
+                    <div class="metric-label">Click-Through Rate Growth</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">-45%</div>
+                    <div class="metric-label">Zero-Result Searches</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">100M+</div>
+                    <div class="metric-label">Daily Search Queries</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section">
+            <h2>Problem Statement</h2>
+            <p>The existing search system faced multiple challenges affecting user experience:</p>
+            <ul>
+                <li>Poor understanding of natural language queries and user intent</li>
+                <li>High rate of zero-result searches frustrating users</li>
+                <li>Lack of personalization in search results</li>
+                <li>Inability to handle misspellings and synonyms effectively</li>
+                <li>Low relevance ranking leading to poor conversion</li>
+                <li>Slow search performance during peak traffic</li>
+            </ul>
+        </section>
+
+        <!-- Solution -->
+        <section class="project-section">
+            <h2>Solution & Approach</h2>
+
+            <h3>1. NLP-Based Query Understanding</h3>
+            <p>Implemented advanced natural language processing to:</p>
+            <ul>
+                <li>Parse and understand user intent from search queries</li>
+                <li>Extract entities, attributes, and relationships from queries</li>
+                <li>Handle complex, multi-faceted search requests</li>
+                <li>Support voice search and conversational queries</li>
+                <li>Implement semantic search for better context understanding</li>
+            </ul>
+
+            <h3>2. Intelligent Query Expansion</h3>
+            <p>Developed systems for:</p>
+            <ul>
+                <li>Automatic spelling correction and fuzzy matching</li>
+                <li>Synonym expansion and related term suggestions</li>
+                <li>Query reformulation for zero-result searches</li>
+                <li>Contextual query suggestions based on user behavior</li>
+                <li>Multi-lingual search support</li>
+            </ul>
+
+            <h3>3. Personalized Ranking</h3>
+            <p>Built machine learning models for:</p>
+            <ul>
+                <li>User-specific result ranking based on preferences</li>
+                <li>Learning to rank algorithms optimizing for relevance</li>
+                <li>Behavioral signals integration (clicks, purchases, time spent)</li>
+                <li>Real-time personalization based on session context</li>
+                <li>A/B testing framework for continuous ranking improvements</li>
+            </ul>
+
+            <h3>4. Performance Optimization</h3>
+            <p>Optimized infrastructure for:</p>
+            <ul>
+                <li>Sub-100ms query response times at scale</li>
+                <li>Distributed indexing for horizontal scalability</li>
+                <li>Smart caching strategies for popular queries</li>
+                <li>Real-time index updates without downtime</li>
+                <li>Load balancing for peak traffic handling</li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="project-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Elasticsearch</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">spaCy</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Apache Kafka</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Kubernetes</span>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings -->
+        <section class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Technical Challenges</h3>
+            <ul>
+                <li><strong>Scale:</strong> Optimized to handle 100M+ daily queries without latency degradation</li>
+                <li><strong>Relevance:</strong> Balanced personalization with diversity in search results</li>
+                <li><strong>Real-time Updates:</strong> Implemented efficient indexing for instant product availability</li>
+                <li><strong>Internationalization:</strong> Supported multiple languages and regional variations</li>
+            </ul>
+
+            <h3>Key Learnings</h3>
+            <ul>
+                <li>Importance of understanding user search patterns and behavior</li>
+                <li>Value of incremental rollout with comprehensive A/B testing</li>
+                <li>Need for continuous monitoring and optimization</li>
+                <li>Balance between sophistication and performance at scale</li>
+            </ul>
+        </section>
+
+        <!-- Results -->
+        <section class="project-section">
+            <h2>Results & Business Impact</h2>
+            <ul>
+                <li><strong>Revenue Impact:</strong> 12% conversion improvement translating to significant revenue increase</li>
+                <li><strong>User Experience:</strong> 45% reduction in zero-result searches and improved satisfaction scores</li>
+                <li><strong>Engagement:</strong> 9% CTR improvement and increased session duration</li>
+                <li><strong>Operational Efficiency:</strong> Reduced customer support queries about finding products</li>
+                <li><strong>Technical Excellence:</strong> Achieved sub-100ms response times at massive scale</li>
+            </ul>
+        </section>
+
+        <!-- Back Button -->
+        <a href="../index.html#projects" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

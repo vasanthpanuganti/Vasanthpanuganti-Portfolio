@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .project-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .project-detail-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .project-section {
+            margin-bottom: 60px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            color: var(--text-heading);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-section p {
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .project-section ul, .project-section ol {
+            color: var(--text-body);
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .project-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Vasanth Panuganti</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <h1>Data Analytics Dashboard</h1>
+        <p>Comprehensive analytics platform with real-time insights and predictive modeling improving product metrics by 18%</p>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <!-- Overview -->
+        <section class="project-section">
+            <h2>Project Overview</h2>
+            <p>I developed a comprehensive data analytics platform that transformed how our organization made product decisions. By consolidating data from multiple sources and providing real-time insights through an intuitive dashboard, we enabled stakeholders across the company to make faster, more informed decisions backed by data.</p>
+
+            <div class="highlight-box">
+                <p><strong>Impact:</strong> Improved key product metrics by 18%, reduced decision-making time by 40%, and enabled data democratization across 200+ stakeholders through self-service analytics.</p>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="project-section">
+            <h2>Key Metrics & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">+18%</div>
+                    <div class="metric-label">Product Metrics Improvement</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">-40%</div>
+                    <div class="metric-label">Decision-Making Time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">200+</div>
+                    <div class="metric-label">Active Dashboard Users</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Data Sources Integrated</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section">
+            <h2>Problem Statement</h2>
+            <p>The organization faced significant challenges with data accessibility and decision-making:</p>
+            <ul>
+                <li>Data scattered across multiple tools and databases</li>
+                <li>Long wait times for custom analytics reports from data team</li>
+                <li>Lack of real-time visibility into key business metrics</li>
+                <li>Limited predictive capabilities for proactive decision-making</li>
+                <li>Inconsistent metrics definitions across teams</li>
+                <li>Manual data aggregation prone to errors and delays</li>
+            </ul>
+        </section>
+
+        <!-- Solution -->
+        <section class="project-section">
+            <h2>Solution & Approach</h2>
+
+            <h3>1. Data Integration Platform</h3>
+            <p>Built comprehensive ETL pipeline to:</p>
+            <ul>
+                <li>Connect and consolidate data from 15+ sources</li>
+                <li>Implement real-time data streaming for critical metrics</li>
+                <li>Create unified data warehouse with standardized schema</li>
+                <li>Ensure data quality through validation and cleansing</li>
+                <li>Maintain data lineage and governance</li>
+            </ul>
+
+            <h3>2. Interactive Dashboards</h3>
+            <p>Developed user-friendly visualization layer featuring:</p>
+            <ul>
+                <li>Executive overview with key business metrics</li>
+                <li>Product performance analytics with drill-down capabilities</li>
+                <li>User behavior and engagement tracking</li>
+                <li>Custom dashboard creation for different stakeholders</li>
+                <li>Mobile-responsive design for on-the-go access</li>
+            </ul>
+
+            <h3>3. Predictive Analytics</h3>
+            <p>Implemented machine learning models for:</p>
+            <ul>
+                <li>Customer churn prediction and prevention</li>
+                <li>Revenue forecasting and trend analysis</li>
+                <li>Anomaly detection for proactive issue identification</li>
+                <li>User lifetime value prediction</li>
+                <li>A/B test outcome prediction</li>
+            </ul>
+
+            <h3>4. Self-Service Analytics</h3>
+            <p>Enabled data democratization through:</p>
+            <ul>
+                <li>Intuitive query builder for non-technical users</li>
+                <li>Pre-built templates for common analyses</li>
+                <li>Automated report generation and distribution</li>
+                <li>Natural language query support</li>
+                <li>Training resources and documentation</li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="project-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Power BI</span>
+                <span class="tech-badge">SQL Server</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">Apache Airflow</span>
+                <span class="tech-badge">Snowflake</span>
+                <span class="tech-badge">Tableau</span>
+                <span class="tech-badge">AWS Redshift</span>
+                <span class="tech-badge">dbt</span>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings -->
+        <section class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Technical Challenges</h3>
+            <ul>
+                <li><strong>Data Quality:</strong> Implemented robust validation to ensure accuracy across sources</li>
+                <li><strong>Performance:</strong> Optimized queries and caching for sub-second dashboard load times</li>
+                <li><strong>Scalability:</strong> Designed architecture to handle 10x data growth</li>
+                <li><strong>Real-time Processing:</strong> Built streaming pipelines for instant metric updates</li>
+            </ul>
+
+            <h3>Key Learnings</h3>
+            <ul>
+                <li>Importance of involving stakeholders early in dashboard design</li>
+                <li>Value of standardizing metrics definitions across organization</li>
+                <li>Need for balance between flexibility and simplicity in self-service tools</li>
+                <li>Critical role of data governance in maintaining trust</li>
+            </ul>
+        </section>
+
+        <!-- Results -->
+        <section class="project-section">
+            <h2>Results & Business Impact</h2>
+            <ul>
+                <li><strong>Decision Speed:</strong> 40% reduction in time from question to insight</li>
+                <li><strong>Product Impact:</strong> 18% improvement in key metrics through data-driven decisions</li>
+                <li><strong>User Adoption:</strong> 200+ active users across product, engineering, and business teams</li>
+                <li><strong>Cost Savings:</strong> Reduced custom analytics requests to data team by 60%</li>
+                <li><strong>Proactive Management:</strong> Early detection of issues through predictive models</li>
+                <li><strong>Data Literacy:</strong> Improved organization-wide data-driven culture</li>
+            </ul>
+        </section>
+
+        <!-- Back Button -->
+        <a href="../index.html#projects" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
