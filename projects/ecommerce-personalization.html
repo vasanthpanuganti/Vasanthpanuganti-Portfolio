@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Personalization Engine - Vasanth Panuganti</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .project-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .project-detail-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .project-section {
+            margin-bottom: 60px;
+        }
+
+        .project-section h2 {
+            font-size: 2rem;
+            color: var(--text-heading);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .project-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-section p {
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .project-section ul, .project-section ol {
+            color: var(--text-body);
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .project-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        .image-placeholder {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 80px;
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Vasanth Panuganti</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <h1>E-commerce Personalization Engine</h1>
+        <p>ML-powered recommendation system that increased conversion by 28% and average order value by 15% for 100M+ users</p>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <!-- Overview -->
+        <section class="project-section">
+            <h2>Project Overview</h2>
+            <p>At Flipkart, I led the development of a sophisticated ML-powered personalization engine that transformed how 100M+ customers discover and purchase products. This comprehensive system leveraged collaborative filtering, real-time user behavior analysis, and advanced machine learning algorithms to deliver hyper-personalized shopping experiences.</p>
+
+            <div class="highlight-box">
+                <p><strong>Impact:</strong> This project resulted in a 28% increase in conversion rate, 15% growth in average order value, and significantly improved customer satisfaction scores across the platform.</p>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="project-section">
+            <h2>Key Metrics & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">+28%</div>
+                    <div class="metric-label">Conversion Rate Increase</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+15%</div>
+                    <div class="metric-label">Average Order Value Growth</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">100M+</div>
+                    <div class="metric-label">Users Impacted</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">35%</div>
+                    <div class="metric-label">Click-Through Rate Improvement</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="project-section">
+            <h2>Problem Statement</h2>
+            <p>Flipkart's customers were experiencing generic product recommendations that didn't account for individual preferences, browsing patterns, or purchase history. This resulted in:</p>
+            <ul>
+                <li>Lower engagement with recommended products</li>
+                <li>Reduced conversion rates due to irrelevant suggestions</li>
+                <li>Missed cross-selling and upselling opportunities</li>
+                <li>Customers spending more time searching for products</li>
+                <li>Decreased customer satisfaction and retention</li>
+            </ul>
+        </section>
+
+        <!-- Solution -->
+        <section class="project-section">
+            <h2>Solution & Approach</h2>
+
+            <h3>1. Data Collection & Analysis</h3>
+            <p>Implemented comprehensive user tracking to collect behavioral data including:</p>
+            <ul>
+                <li>Product views, clicks, and add-to-cart actions</li>
+                <li>Purchase history and transaction patterns</li>
+                <li>Search queries and filter preferences</li>
+                <li>Time spent on product pages</li>
+                <li>Device and platform usage patterns</li>
+            </ul>
+
+            <h3>2. ML Model Development</h3>
+            <p>Developed a hybrid recommendation system combining multiple approaches:</p>
+            <ul>
+                <li><strong>Collaborative Filtering:</strong> User-based and item-based recommendations using matrix factorization</li>
+                <li><strong>Content-Based Filtering:</strong> Product attribute matching based on user preferences</li>
+                <li><strong>Deep Learning Models:</strong> Neural networks for pattern recognition in complex user behaviors</li>
+                <li><strong>Real-Time Processing:</strong> Stream processing for immediate personalization updates</li>
+            </ul>
+
+            <h3>3. A/B Testing Framework</h3>
+            <p>Established rigorous testing methodology:</p>
+            <ul>
+                <li>Conducted 15+ A/B tests across different user segments</li>
+                <li>Tested various algorithm configurations and hybrid approaches</li>
+                <li>Measured impact on conversion, engagement, and revenue metrics</li>
+                <li>Iteratively refined models based on test results</li>
+            </ul>
+
+            <h3>4. Scalable Infrastructure</h3>
+            <p>Built robust backend systems to handle massive scale:</p>
+            <ul>
+                <li>Distributed computing for real-time recommendation generation</li>
+                <li>Caching layers for low-latency response times</li>
+                <li>Model serving infrastructure supporting 100M+ daily requests</li>
+                <li>Automated model retraining and deployment pipelines</li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="project-section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">AWS SageMaker</span>
+                <span class="tech-badge">Apache Spark</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Kafka</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Kubernetes</span>
+            </div>
+        </section>
+
+        <!-- Challenges & Learnings -->
+        <section class="project-section">
+            <h2>Challenges & Learnings</h2>
+
+            <h3>Technical Challenges</h3>
+            <ul>
+                <li><strong>Cold Start Problem:</strong> Solved by implementing hybrid models that combine collaborative and content-based filtering for new users</li>
+                <li><strong>Scalability:</strong> Optimized algorithms and infrastructure to handle 100M+ users without latency issues</li>
+                <li><strong>Data Quality:</strong> Implemented data validation and cleaning pipelines to ensure model accuracy</li>
+                <li><strong>Real-Time Updates:</strong> Built streaming data pipelines for instant personalization updates</li>
+            </ul>
+
+            <h3>Key Learnings</h3>
+            <ul>
+                <li>Importance of diverse data sources for accurate personalization</li>
+                <li>Value of continuous A/B testing and iteration</li>
+                <li>Need for transparent and explainable AI recommendations</li>
+                <li>Balance between personalization and serendipity in recommendations</li>
+            </ul>
+        </section>
+
+        <!-- Results -->
+        <section class="project-section">
+            <h2>Results & Business Impact</h2>
+            <ul>
+                <li><strong>Revenue Impact:</strong> Generated significant revenue increase through improved conversion and AOV</li>
+                <li><strong>User Engagement:</strong> 35% improvement in recommendation click-through rates</li>
+                <li><strong>Customer Satisfaction:</strong> Positive feedback and increased retention rates</li>
+                <li><strong>Operational Efficiency:</strong> Reduced customer support queries related to product discovery</li>
+                <li><strong>Competitive Advantage:</strong> Established Flipkart as a leader in personalized e-commerce experiences</li>
+            </ul>
+        </section>
+
+        <!-- Back Button -->
+        <a href="../index.html#projects" class="back-button">← Back to Portfolio</a>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
