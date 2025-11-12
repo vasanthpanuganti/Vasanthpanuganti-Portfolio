@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Case Studies | Vasanth Panuganti</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .all-case-studies-page {
+            min-height: 100vh;
+            padding: 100px 20px 60px;
+            background: var(--bg-primary);
+        }
+
+        .page-header {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .page-header p {
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-to-home:hover {
+            color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        .case-studies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--bg-primary);
+            width: 90%;
+            max-width: 1400px;
+            height: 90vh;
+            margin: auto;
+            border-radius: 12px;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: translateY(50px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: sticky;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 10001;
+            margin-left: auto;
+            margin-right: 20px;
+            margin-bottom: -40px;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--text-color);
+            transform: rotate(90deg);
+        }
+
+        .modal-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: var(--bg-primary);
+        }
+
+        @media (max-width: 968px) {
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 95vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .all-case-studies-page {
+                padding: 80px 16px 40px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .modal-content {
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="all-case-studies-page">
+        <div class="case-studies-container">
+            <a href="index.html#case-studies" class="back-to-home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Portfolio
+            </a>
+
+            <div class="page-header">
+                <h1>Product Case Studies</h1>
+                <p>Deep dives into my most impactful projects</p>
+            </div>
+
+            <div class="case-studies-grid">
+                <!-- Case Study 1 -->
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-1.jpg" alt="E-commerce Personalization">
+                    </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/Flipkart.png" alt="Flipkart">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">UX Design</span>
+                                <span class="category-tag">Data Systems</span>
+                                <span class="category-tag">Personalization</span>
+                            </div>
+                        </div>
+                        <h3 class="case-study-title-new">E-commerce Personalization Engine</h3>
+                        <p class="case-study-description">Built ML-powered recommendation system boosting conversion by 28% for 100M+ users. Implemented real-time user behavior analysis and collaborative filtering algorithms.</p>
+                        <a href="#" class="case-study-cta" data-modal-src="case-studies/flipkart-personalization.html">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-2.jpg" alt="Adaptive Learning Platform">
+                    </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/K12.png" alt="K12">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">EdTech</span>
+                                <span class="category-tag">Automation</span>
+                                <span class="category-tag">ML/AI</span>
+                            </div>
+                        </div>
+                        <h3 class="case-study-title-new">Adaptive Learning Platform</h3>
+                        <p class="case-study-description">Designed personalized learning paths with ML-powered adaptive quizzes. Reduced dropout by 30% and improved student engagement by 25% through dynamic content delivery.</p>
+                        <a href="#" class="case-study-cta" data-modal-src="case-studies/k12-adaptive-learning.html">
+                            Explore Project
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="modern-case-study">
+                    <div class="case-study-image-section">
+                        <img src="assets/case-study-3.jpg" alt="Search Optimization">
+                    </div>
+                    <div class="case-study-content-section">
+                        <div class="case-study-header-new">
+                            <div class="project-logo">
+                                <img src="assets/Byjus-Logo.png" alt="Byju's">
+                            </div>
+                            <div class="category-tags">
+                                <span class="category-tag">Search</span>
+                                <span class="category-tag">NLP</span>
+                                <span class="category-tag">Data Systems</span>
+                            </div>
+                        </div>
+                        <h3 class="case-study-title-new">Search Optimization System</h3>
+                        <p class="case-study-description">Revamped search with NLP-based query understanding and personalized ranking. Achieved 12% higher conversion and 9% CTR increase for millions of daily searches.</p>
+                        <a href="#" class="case-study-cta" data-modal-src="case-studies/byjus-search-optimization.html">
+                            View Case Study
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="caseStudyModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <iframe class="modal-iframe" id="modalIframe" title="Case Study Details"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('caseStudyModal');
+        const modalIframe = document.getElementById('modalIframe');
+        const closeModalBtn = document.getElementById('closeModal');
+        const caseStudyLinks = document.querySelectorAll('[data-modal-src]');
+
+        // Open modal
+        caseStudyLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const src = link.getAttribute('data-modal-src');
+                modalIframe.src = src;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal function
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            // Clear iframe after animation
+            setTimeout(() => {
+                modalIframe.src = '';
+            }, 300);
+        }
+
+        // Close button click
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
