@@ -64,22 +64,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll to Top Button
+    // Scroll to Top Button and Navbar Effects
     const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+        const scrollY = window.pageYOffset;
+
+        // Scroll to top button
+        if (scrollY > 300) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');
         }
 
-        // Change navbar shadow on scroll
-        const navbar = document.querySelector('.navbar');
-        if (window.pageYOffset > 20) {
-            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.12)';
+        // Add scrolled class to navbar for fluidic effect
+        if (scrollY > 50) {
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+            navbar.classList.remove('scrolled');
         }
     });
 
