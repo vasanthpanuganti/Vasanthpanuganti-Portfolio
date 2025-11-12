@@ -35,18 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-
-            // Animate hamburger
-            const spans = hamburger.querySelectorAll('span');
-            if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+            hamburger.classList.toggle('active');
         });
     }
 
@@ -56,10 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                const spans = hamburger.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                hamburger.classList.remove('active');
             }
         });
     });
@@ -74,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTopBtn.classList.remove('show');
         }
 
-        // Change navbar shadow on scroll
+        // Add scrolled class to navbar for enhanced effects
         const navbar = document.querySelector('.navbar');
         if (window.pageYOffset > 20) {
-            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.12)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+            navbar.classList.remove('scrolled');
         }
     });
 
